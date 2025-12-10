@@ -1,0 +1,11 @@
+CorrelationId: f8edc06b-b558-4c0b-86db-47c2aa65d5ef
+UTC DateTime: 12/04/2025 17:56:15
+
+The following files/folders have not been downloaded
+0. TEG/comisiones_alc/afiliaciones/excel2/plantilla-Sistema de Votacion-1-Ahuachap????n-Ahuachap????n-Usuario(User1)-Pass(123).xlsx
+1. TEG/comisiones_alc/plantilla/docs/_layouts/default.html
+2. TEG/comisiones_alc/plantilla/docs/_layouts/_notes
+3. TEG/comisiones_alc/plantilla/docs/_layouts/home.html
+4. TEG/comisiones_alc/plantilla/docs/_layouts/page.html
+5. TEG/comisiones_alc/plantilla/docs/_layouts/post.html
+6. TEG/comisiones_alc/plantilla/plugins/daterangepicker/example/browserify/bundle.js

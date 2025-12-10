@@ -1,0 +1,10 @@
+[21-Dec-2020 13:28:41 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[21-Dec-2020 13:33:09 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[21-Dec-2020 13:33:16 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[21-Dec-2020 13:33:30 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[25-Jan-2021 13:33:23 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[20-Feb-2021 15:28:59 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 43
+[20-Feb-2021 15:30:08 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 43
+[20-Feb-2021 16:03:26 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 43
+[20-Feb-2021 16:06:24 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 43
+[20-Feb-2021 16:08:31 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 43

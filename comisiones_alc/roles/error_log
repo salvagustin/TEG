@@ -1,0 +1,5 @@
+[26-Dec-2019 10:26:51 America/El_Salvador] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/a1c4lu5v/adminmedic.alcaldialaunion.gob.sv/libreria_php/cnn_medico.php on line 21
+[26-Dec-2019 10:48:30 America/El_Salvador] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/a1c4lu5v/adminmedic.alcaldialaunion.gob.sv/libreria_php/cnn_medico.php on line 21
+[16-Aug-2020 07:30:03 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/roles/agregarDatos.php on line 3
+[16-Aug-2020 07:30:03 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/roles/agregarDatos.php on line 3
+[16-Aug-2020 07:30:03 UTC] PHP Fatal error:  require(): Failed opening required 'php/conexion.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/roles/agregarDatos.php on line 3

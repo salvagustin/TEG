@@ -1,0 +1,333 @@
+[16-Aug-2020 01:14:33 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php on line 4
+[16-Aug-2020 01:14:33 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php on line 4
+[16-Aug-2020 01:14:33 UTC] PHP Fatal error:  require(): Failed opening required 'php/conexion.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php on line 4
+[16-Aug-2020 01:57:49 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 01:57:49 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 01:57:49 UTC] PHP Fatal error:  require(): Failed opening required 'php/conexion.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 01:58:21 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 01:58:21 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 01:58:21 UTC] PHP Fatal error:  require(): Failed opening required 'php/conexion.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 01:58:21 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 01:58:21 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 01:58:21 UTC] PHP Fatal error:  require(): Failed opening required 'php/conexion.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:00:11 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:00:11 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:00:11 UTC] PHP Fatal error:  require(): Failed opening required 'php/conexion.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:00:13 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:00:13 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:00:13 UTC] PHP Fatal error:  require(): Failed opening required 'php/conexion.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:01:19 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:01:19 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:01:19 UTC] PHP Fatal error:  require(): Failed opening required 'php/conexion.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:01:36 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:01:36 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:01:36 UTC] PHP Fatal error:  require(): Failed opening required 'php/conexion.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:01:54 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:01:54 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:01:54 UTC] PHP Fatal error:  require(): Failed opening required 'php/conexion.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:02:00 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:02:00 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:02:00 UTC] PHP Fatal error:  require(): Failed opening required 'php/conexion.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 21
+[16-Aug-2020 02:02:24 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 19
+[16-Aug-2020 02:02:24 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 19
+[16-Aug-2020 02:02:24 UTC] PHP Fatal error:  require(): Failed opening required 'php/conexion.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 19
+[16-Aug-2020 02:02:44 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 19
+[16-Aug-2020 02:02:44 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 19
+[16-Aug-2020 02:02:44 UTC] PHP Fatal error:  require(): Failed opening required 'php/conexion.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 19
+[16-Aug-2020 02:03:11 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 19
+[16-Aug-2020 02:03:11 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 19
+[16-Aug-2020 02:03:11 UTC] PHP Fatal error:  require(): Failed opening required 'php/conexion.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 19
+[16-Aug-2020 02:04:03 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 19
+[16-Aug-2020 02:04:03 UTC] PHP Warning:  require(php/conexion.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 19
+[16-Aug-2020 02:04:03 UTC] PHP Fatal error:  require(): Failed opening required 'php/conexion.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/afiliacion.php on line 19
+[16-Aug-2020 04:09:18 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 59
+[16-Aug-2020 04:09:54 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 59
+[16-Aug-2020 06:05:30 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[16-Aug-2020 07:20:07 UTC] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php on line 44
+[16-Aug-2020 07:20:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php on line 44
+[16-Aug-2020 07:20:36 UTC] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php on line 44
+[16-Aug-2020 07:20:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php on line 44
+[16-Aug-2020 07:20:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php on line 44
+[16-Aug-2020 07:20:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php on line 44
+[16-Aug-2020 07:20:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php on line 44
+[16-Aug-2020 07:20:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php on line 44
+[16-Aug-2020 07:20:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php on line 44
+[16-Aug-2020 07:21:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/recuperar.php on line 44
+[17-Aug-2020 16:55:29 America/El_Salvador] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php:83
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php on line 83
+[17-Aug-2020 16:55:51 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 16:56:32 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 16:56:36 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 16:56:57 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 16:57:51 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 16:59:11 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 16:59:13 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 16:59:15 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 16:59:58 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:00:01 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:00:32 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:03:00 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:03:17 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:03:56 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:03:58 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:04:00 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:04:23 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:26:10 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:26:22 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:26:23 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:26:36 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:27:03 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:27:04 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:27:05 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:27:27 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:27:29 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:27:42 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:28:02 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:30:33 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:31:00 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:31:31 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:35:19 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:35:42 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[17-Aug-2020 17:35:52 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:36:19 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:36:46 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:36:49 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:36:54 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:37:32 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:37:57 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:39:21 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:39:25 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[17-Aug-2020 17:40:06 America/El_Salvador] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 69
+[22-Aug-2020 09:25:29 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[22-Aug-2020 09:29:40 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[22-Aug-2020 09:30:08 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[22-Aug-2020 09:30:22 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[22-Aug-2020 09:30:34 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[22-Aug-2020 09:30:48 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[22-Aug-2020 09:33:24 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[22-Aug-2020 09:37:32 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[22-Aug-2020 11:31:22 America/El_Salvador] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php:53
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php on line 53
+[22-Aug-2020 11:31:25 America/El_Salvador] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php:53
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php on line 53
+[22-Aug-2020 11:31:26 America/El_Salvador] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php:53
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php on line 53
+[22-Aug-2020 11:31:37 America/El_Salvador] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php:53
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php on line 53
+[22-Aug-2020 11:31:39 America/El_Salvador] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php:53
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php on line 53
+[24-Aug-2020 12:00:39 America/El_Salvador] PHP Fatal error:  Allowed memory size of 335544320 bytes exhausted (tried to allocate 331366400 bytes) in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/votar.php on line 54
+[24-Aug-2020 12:55:20 America/El_Salvador] PHP Fatal error:  Uncaught Error: Call to a member function arreglo() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/votar.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/votar.php on line 12
+[24-Aug-2020 12:55:45 America/El_Salvador] PHP Fatal error:  Uncaught Error: Call to a member function arreglo() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/votar.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/votar.php on line 12
+[24-Aug-2020 12:55:48 America/El_Salvador] PHP Fatal error:  Uncaught Error: Call to a member function arreglo() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/votar.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/votar.php on line 12
+[25-Aug-2020 10:03:37 America/El_Salvador] PHP Parse error:  syntax error, unexpected '?>' in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/votar.php on line 65
+[25-Aug-2020 10:03:39 America/El_Salvador] PHP Parse error:  syntax error, unexpected '?>' in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/votar.php on line 65
+[25-Aug-2020 10:03:40 America/El_Salvador] PHP Parse error:  syntax error, unexpected '?>' in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/votar.php on line 65
+[25-Aug-2020 10:03:42 America/El_Salvador] PHP Parse error:  syntax error, unexpected '?>' in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/votar.php on line 65
+[25-Aug-2020 10:03:43 America/El_Salvador] PHP Parse error:  syntax error, unexpected '?>' in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/votar.php on line 65
+[25-Aug-2020 11:45:51 America/El_Salvador] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php on line 2
+[25-Aug-2020 11:46:54 America/El_Salvador] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php on line 2
+[25-Aug-2020 11:48:17 America/El_Salvador] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php on line 2
+[25-Aug-2020 11:48:51 America/El_Salvador] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php on line 2
+[25-Aug-2020 11:49:44 America/El_Salvador] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php on line 2
+[25-Aug-2020 11:53:19 America/El_Salvador] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php on line 2
+[25-Aug-2020 11:53:24 America/El_Salvador] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php on line 2
+[25-Aug-2020 11:53:30 America/El_Salvador] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php on line 2
+[25-Aug-2020 11:53:36 America/El_Salvador] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php on line 2
+[25-Aug-2020 11:53:51 America/El_Salvador] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php on line 2
+[25-Aug-2020 11:54:19 America/El_Salvador] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php on line 2
+[25-Aug-2020 11:54:24 America/El_Salvador] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php on line 2
+[25-Aug-2020 11:55:31 America/El_Salvador] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php on line 2
+[25-Aug-2020 11:55:34 America/El_Salvador] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php on line 2
+[25-Aug-2020 16:00:02 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/registrarVoto.php on line 108
+[25-Aug-2020 16:00:09 America/El_Salvador] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/registrarVoto.php:65
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/registrarVoto.php on line 65
+[25-Aug-2020 16:00:38 America/El_Salvador] PHP Fatal error:  Uncaught Error: Call to a member function consulta() on null in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/registrarVoto.php:65
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/registrarVoto.php on line 65
+[25-Aug-2020 21:04:37 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[26-Aug-2020 08:58:29 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[26-Aug-2020 08:58:44 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[26-Aug-2020 08:58:56 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[26-Aug-2020 09:00:24 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[26-Aug-2020 09:00:38 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[26-Aug-2020 10:26:46 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[26-Aug-2020 10:27:46 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[26-Aug-2020 10:33:03 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[26-Aug-2020 10:33:27 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[26-Aug-2020 10:47:13 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[26-Aug-2020 10:58:16 America/El_Salvador] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php:5) in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/salir.php on line 9
+[26-Aug-2020 11:00:35 America/El_Salvador] PHP Parse error:  syntax error, unexpected ')' in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php on line 111
+[26-Aug-2020 11:00:50 America/El_Salvador] PHP Parse error:  syntax error, unexpected ')' in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php on line 111
+[26-Aug-2020 11:02:19 America/El_Salvador] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php:5) in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/salir.php on line 9
+[28-Aug-2020 09:11:04 America/El_Salvador] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php on line 131
+[28-Aug-2020 09:11:06 America/El_Salvador] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php on line 131
+[28-Aug-2020 09:11:06 America/El_Salvador] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/index.php on line 131
+[28-Aug-2020 09:43:43 America/El_Salvador] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/seguro.php:5) in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/salir.php on line 9
+[28-Aug-2020 11:57:33 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[28-Aug-2020 12:03:45 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[31-Aug-2020 10:53:08 America/El_Salvador] PHP Warning:  require_once(PHPExcel/Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php on line 5
+[31-Aug-2020 10:53:08 America/El_Salvador] PHP Fatal error:  require_once(): Failed opening required 'PHPExcel/Classes/PHPExcel.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php on line 5
+[31-Aug-2020 14:02:39 America/El_Salvador] PHP Warning:  move_uploaded_file(excel/plantilla-Sistema de Votacion CEG.xlsx): failed to open stream: No such file or directory in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php on line 68
+[31-Aug-2020 14:02:39 America/El_Salvador] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpBQ3OcT' to 'excel/plantilla-Sistema de Votacion CEG.xlsx' in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php on line 68
+[31-Aug-2020 14:02:39 America/El_Salvador] PHP Fatal error:  Uncaught Error: Class 'PHPExcel_IOFactory' not found in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php on line 70
+[31-Aug-2020 14:07:07 America/El_Salvador] PHP Fatal error:  Uncaught Error: Class 'PHPExcel_IOFactory' not found in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php on line 70
+[31-Aug-2020 14:07:19 America/El_Salvador] PHP Fatal error:  Uncaught Error: Class 'PHPExcel_IOFactory' not found in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php on line 70
+[31-Aug-2020 14:07:33 America/El_Salvador] PHP Fatal error:  Uncaught Error: Class 'PHPExcel_IOFactory' not found in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php on line 70
+[31-Aug-2020 14:27:08 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[31-Aug-2020 14:27:17 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[31-Aug-2020 14:28:26 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[31-Aug-2020 14:41:09 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[31-Aug-2020 14:45:46 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[31-Aug-2020 16:22:38 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[31-Aug-2020 16:23:21 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[31-Aug-2020 16:25:06 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[31-Aug-2020 16:31:02 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[31-Aug-2020 16:42:34 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[02-Sep-2020 10:41:10 America/El_Salvador] PHP Parse error:  syntax error, unexpected '$i' (T_VARIABLE) in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php on line 82
+[02-Sep-2020 10:41:58 America/El_Salvador] PHP Parse error:  syntax error, unexpected '$i' (T_VARIABLE) in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php on line 82
+[02-Sep-2020 10:41:59 America/El_Salvador] PHP Parse error:  syntax error, unexpected '$i' (T_VARIABLE) in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php on line 82
+[08-Sep-2020 12:56:58 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[08-Sep-2020 13:09:28 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[08-Sep-2020 13:22:09 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[11-Sep-2020 08:50:07 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[11-Sep-2020 10:35:34 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[11-Sep-2020 10:40:32 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[11-Sep-2020 10:40:34 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[11-Sep-2020 13:21:30 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[09-Nov-2020 19:15:23 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[09-Nov-2020 19:28:42 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[09-Nov-2020 19:28:44 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[09-Nov-2020 19:28:45 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[09-Nov-2020 19:28:50 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[09-Nov-2020 21:13:59 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[09-Nov-2020 21:15:54 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[09-Nov-2020 21:19:13 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[09-Nov-2020 21:19:27 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[09-Nov-2020 21:19:29 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[23-Nov-2020 14:49:15 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[23-Nov-2020 14:49:44 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[25-Nov-2020 08:35:15 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[26-Nov-2020 10:39:25 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 176
+[26-Nov-2020 10:39:27 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 176
+[29-Nov-2020 11:17:11 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:17:30 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:17:34 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:17:35 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:17:36 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:17:48 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:18:21 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:18:23 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:19:05 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:19:07 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:19:08 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:19:09 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:19:10 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:19:27 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:19:27 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:19:46 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:19:50 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:19:51 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:19:52 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:20:57 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:21:00 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:21:01 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[29-Nov-2020 11:21:02 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/validarAfi.php on line 234
+[15-Dec-2020 21:28:45 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[14-Jan-2021 13:36:06 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/php/conexion.php on line 43
+[01-Feb-2021 11:19:21 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php on line 175
+[01-Feb-2021 11:19:23 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php on line 175
+[01-Feb-2021 11:19:37 America/El_Salvador] PHP Parse error:  syntax error, unexpected end of file in /home/a1c4lu5v/comisiones.alcaldialaunion.gob.sv/afiliaciones/subirAfiliados.php on line 175
+[23-Jun-2021 09:42:12 America/El_Salvador] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:42:12 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:43:16 America/El_Salvador] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:43:16 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:44:40 America/El_Salvador] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:44:40 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:44:40 America/El_Salvador] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:44:40 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:45:20 America/El_Salvador] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:45:20 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:45:41 America/El_Salvador] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:45:41 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:45:59 America/El_Salvador] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:45:59 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:48:32 America/El_Salvador] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:48:32 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:49:04 America/El_Salvador] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:49:04 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:49:16 America/El_Salvador] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:49:16 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:50:25 America/El_Salvador] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:50:25 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:50:32 America/El_Salvador] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:50:32 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:51:07 America/El_Salvador] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 09:51:07 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 17
+[23-Jun-2021 13:44:47 America/El_Salvador] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/alc4arw3n1a/comisiones.alcaldiaarmenia.gob.sv/php/conexion.php on line 43

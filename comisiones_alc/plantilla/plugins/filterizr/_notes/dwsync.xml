@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="ActiveFilter.d.ts" server="69.175.104.242//" local="132244606321784988" remote="132212675400000000" Dst="0" />
+<file name="BrowserWindow.d.ts" server="69.175.104.242//" local="132244606325321415" remote="132212675400000000" Dst="0" />
+<file name="EventReceiver.d.ts" server="69.175.104.242//" local="132244606326440844" remote="132212675400000000" Dst="0" />
+<file name="FilterContainer.d.ts" server="69.175.104.242//" local="132244606339592891" remote="132212675400000000" Dst="0" />
+<file name="FilterControls.d.ts" server="69.175.104.242//" local="132244606340547529" remote="132212675400000000" Dst="0" />
+<file name="FilterItem.d.ts" server="69.175.104.242//" local="132244606354123938" remote="132212675400000000" Dst="0" />
+<file name="FilterItems.d.ts" server="69.175.104.242//" local="132244606361498913" remote="132212675400000000" Dst="0" />
+<file name="Filterizr.d.ts" server="69.175.104.242//" local="132244606369502759" remote="132212675400000000" Dst="0" />
+<file name="FilterizrElement.d.ts" server="69.175.104.242//" local="132244606373055703" remote="132212675400000000" Dst="0" />
+<file name="StyledFilterizrElement.d.ts" server="69.175.104.242//" local="132244606385333809" remote="132212675400000000" Dst="0" />
+<file name="StyledFilterizrElements.d.ts" server="69.175.104.242//" local="132244606388442534" remote="132212675400000000" Dst="0" />
+<file name="animate.d.ts" server="69.175.104.242//" local="132244606389217314" remote="132212675400000000" Dst="0" />
+<file name="getLayoutPositions.d.ts" server="69.175.104.242//" local="132244606399723314" remote="132212675400000000" Dst="0" />
+<file name="filterizr.min.js" server="69.175.104.242//" local="132244606400402922" remote="132212675400000000" Dst="0" />
+<file name="index.d.ts" server="69.175.104.242//" local="132244606400432879" remote="132212675400000000" Dst="0" />
+<file name="index.jquery.d.ts" server="69.175.104.242//" local="132244606404272705" remote="132212675400000000" Dst="0" />
+<file name="installAsJQueryPlugin.d.ts" server="69.175.104.242//" local="132244606405262889" remote="132212675400000000" Dst="0" />
+<file name="jquery.filterizr.min.js" server="69.175.104.242//" local="132244606409967830" remote="132212675400000000" Dst="0" />
+<file name="utils.d.ts" server="69.175.104.242//" local="132244606491194097" remote="132212675400000000" Dst="0" />
+<file name="vanilla.filterizr.min.js" server="69.175.104.242//" local="132244606496043311" remote="132212675400000000" Dst="0" />
+<file name="ActiveFilter.d.ts" server="alcaldialaunion.gob.sv//" local="132372421020984851" remote="132271494000000000" Dst="0" />
+<file name="BrowserWindow.d.ts" server="alcaldialaunion.gob.sv//" local="132372421024423803" remote="132271494000000000" Dst="0" />
+<file name="EventReceiver.d.ts" server="alcaldialaunion.gob.sv//" local="132372421025433183" remote="132271494000000000" Dst="0" />
+<file name="FilterContainer.d.ts" server="alcaldialaunion.gob.sv//" local="132372421032128786" remote="132271494000000000" Dst="0" />
+<file name="FilterControls.d.ts" server="alcaldialaunion.gob.sv//" local="132372421033899170" remote="132271494000000000" Dst="0" />
+<file name="FilterItem.d.ts" server="alcaldialaunion.gob.sv//" local="132372421040597736" remote="132271494000000000" Dst="0" />
+<file name="FilterItems.d.ts" server="alcaldialaunion.gob.sv//" local="132372421046450836" remote="132271494000000000" Dst="0" />
+<file name="Filterizr.d.ts" server="alcaldialaunion.gob.sv//" local="132372421051894521" remote="132271494000000000" Dst="0" />
+<file name="FilterizrElement.d.ts" server="alcaldialaunion.gob.sv//" local="132372421053553465" remote="132271494000000000" Dst="0" />
+<file name="StyledFilterizrElement.d.ts" server="alcaldialaunion.gob.sv//" local="132372421065854464" remote="132271494000000000" Dst="0" />
+<file name="StyledFilterizrElements.d.ts" server="alcaldialaunion.gob.sv//" local="132372421065834486" remote="132271494000000000" Dst="0" />
+<file name="animate.d.ts" server="alcaldialaunion.gob.sv//" local="132372421067906191" remote="132271494000000000" Dst="0" />
+<file name="getLayoutPositions.d.ts" server="alcaldialaunion.gob.sv//" local="132372421076951200" remote="132271494000000000" Dst="0" />
+<file name="filterizr.min.js" server="alcaldialaunion.gob.sv//" local="132372421078149777" remote="132271494000000000" Dst="0" />
+<file name="index.d.ts" server="alcaldialaunion.gob.sv//" local="132372421078581326" remote="132271494000000000" Dst="0" />
+<file name="index.jquery.d.ts" server="alcaldialaunion.gob.sv//" local="132372421081504971" remote="132271494000000000" Dst="0" />
+<file name="installAsJQueryPlugin.d.ts" server="alcaldialaunion.gob.sv//" local="132372421084228157" remote="132271494000000000" Dst="0" />
+<file name="jquery.filterizr.min.js" server="alcaldialaunion.gob.sv//" local="132372421087054935" remote="132271494000000000" Dst="0" />
+<file name="utils.d.ts" server="alcaldialaunion.gob.sv//" local="132372421154987757" remote="132271494000000000" Dst="0" />
+<file name="vanilla.filterizr.min.js" server="alcaldialaunion.gob.sv//" local="132372421159468532" remote="132271494000000000" Dst="0" />
+</dwsync>
