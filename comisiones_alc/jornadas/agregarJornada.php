@@ -13,7 +13,7 @@
             <div class="form-group">
               <div class="form-group">
                 <label>Descripción:</label>
-                <input name="descripcion" type="text" class="form-control" required id="descripcion">
+                <input name="descripcion" type="text" class="form-control text-uppercase" required id="descripcion">
               </div>
             </div>
           </div>

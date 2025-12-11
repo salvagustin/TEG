@@ -7,11 +7,11 @@ $fecha = date("Y-m-d");
 
 if($_SESSION["rol"] == "Administrador")
 {
-  $can = $con->consulta("SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui FROM afiliados  ORDER BY primerNombre ASC, segundoNombre ASC, primerApellido ASC");
+  $can = $con->consulta("SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui FROM afiliados  WHERE eliminado <> 1 ORDER BY primerNombre ASC, segundoNombre ASC, primerApellido ASC");
 }
 else
 {
-  $can = $con->consulta("SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui FROM afiliados  ORDER BY primerNombre ASC, segundoNombre ASC, primerApellido ASC");
+  $can = $con->consulta("SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui FROM afiliados  WHERE eliminado <> 1 ORDER BY primerNombre ASC, segundoNombre ASC, primerApellido ASC");
 }
 
 
@@ -110,7 +110,7 @@ function validar()
               <div class="row">
                 <div class="col">
                   <form action="candidatos/agregarDatos.php" method="post" enctype="multipart/form-data" id="form1" name="form1">
-                    <div class="card card-primary card-outline">
+                    <div class="card card-primary card-outline" style="border-top: 3px solid #131d2e;">
                       <div class="card-header bg-primary">
                         <h3 class="card-title">Nuevo candidato  </h3>
                       </div>
@@ -173,38 +173,12 @@ function validar()
                               <input type="text" name="profesion" id="profesion" class="form-control" placeholder="Profesión del candidato">
                             </div>
                           </div>
-                          <div class="col">
-                            <div class="form-group">
-                              <label for="">Cargo en la municipalidad</label>
-                              <input type="text" name="cargoMuni" id="cargoMuni" class="form-control" placeholder="Cago del candidato en la municipalidad">
-                            </div>
-                          </div>
                         </div>
-                        <?php if($_SESSION["rol"] == "Super"){ ?>
-                        <div class="row">
-                          <div class="col">
-                            <div class="form-group">
-                              <label for="">Departamento *</label>
-                              <select name="depto" id="depto" class="form-control select2" required>
-                                <?php $de = $con->consulta("SELECT * FROM departamentos WHERE eliminado = 0");
-                                while($depto = $con->arreglo($de)){ ?>
-                                <option value="<?php echo $depto["id_depto"]; ?>"><?php echo $depto["depto"]; ?></option>
-                                <?php } ?>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-group">
-                              <label for="">Municipio *</label>
-                              <select name="muni" id="muni" class="form-control select2" required></select>
-                            </div>
-                          </div>
-                        </div>
-                        <?php } ?>
+                        
                       </div>
                       *Datos Obligatorios
                       <div class="card-footer text-center">
-                        <button type="submit" class="btn btn-primary" id="boton" name="boton"><i class="far fa-save"></i> Registrar candidato</button>
+                        <button type="submit" class="btn btn-primary" id="boton" name="boton" style="background-color:#131d2e; border-color: #131d2e; "><i class="far fa-save"></i> Registrar candidato</button>
                       </div>
                     </div>
                   </form>
@@ -223,40 +197,8 @@ function validar()
   <!-- ./wrapper -->
   <!-- jQuery -->
   <?php include("footer.php"); ?>
-  <script type="text/javascript">
-    $(function() {
-      //Initialize Select2 Elements
-      $('.select2').select2()
-      //Initialize Select2 Elements
-      $('.select2bs4').select2({
-        theme: 'bootstrap4'
-      })
-    })
-  </script>
-  <script type="text/javascript">
-		$(document).ready(function()
-    {
-			$('#depto').val(0);
-		  recargardeptoExpe();
-		  $('#depto').change(function()
-      {
-			  recargardeptoExpe();
-		  });
-		})
+  
 
-	  function recargardeptoExpe()
-    {
-		  $.ajax({
-				type:"POST",
-				url:"candidatos/muni.php",
-				data:"continente=" + $('#depto').val(),
-				success:function(r)
-      	{
-					$('#muni').html(r);
-				}
-	  	});
-	  }
-  </script>
 </body>
 
 </html>

@@ -12,7 +12,6 @@ if (isset($_POST["boton"]))
   $edad          = $_POST['edad'];
   $profesion     = $_POST['profesion'];
   $domicilio     = $_POST['domicilio'];
-  $cargoMuni     = $_POST['cargoMuni'];
   $foto          = $_FILES['foto']['name'];
   $ruta          = "fotos/";
 

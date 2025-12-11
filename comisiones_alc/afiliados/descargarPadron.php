@@ -5,11 +5,11 @@ require "../seguro.php";
 
 $con = new cnn();
 
-if($_SESSION["rol"] == "Super")
+if($_SESSION["rol" ] == "Super")
 {
-  $para = $con->consulta("SELECT departamentos.depto, municipios.municipio, parametros.municipalidad, parametros.nombreAlcalde, parametros.cargoAlcalde, parametros.nombreSecretario, parametros.cargoSecretario, parametros.telefono, parametros.direccion, parametros.correo, parametros.logo FROM parametros INNER JOIN departamentos ON parametros.id_depto = departamentos.id_depto INNER JOIN municipios ON departamentos.id_depto = municipios.id_depto AND parametros.id_muni = municipios.id_muni WHERE parametros.eliminado = 0");
+  $para = $con->consulta("SELECT  parametros.nombreAlcalde, parametros.cargoAlcalde, parametros.nombreSecretario, parametros.cargoSecretario, parametros.telefono, parametros.direccion, parametros.correo, parametros.logo FROM parametros WHERE parametros.eliminado = 0");
 
-  $jor = $con->consulta("SELECT periodoDesde, periodoHasta FROM jornadas WHERE eliminado = 0 AND estado = 'Activo'");
+  $jor = $con->consulta("SELECT periodoDesde, periodoHasta FROM jornadas WHERE eliminado = 0 AND estado = 'Activo'" );
 
   $da = $con->consulta("SELECT afiliacion, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui, cargo FROM afiliados WHERE eliminado <> 1 ORDER BY primerApellido ASC, segundoApellido ASC, primerNombre ASC");
  
@@ -17,11 +17,11 @@ if($_SESSION["rol"] == "Super")
 }
 else
 {
-  $para = $con->consulta("SELECT departamentos.depto, municipios.municipio, parametros.municipalidad, parametros.nombreAlcalde, parametros.cargoAlcalde, parametros.nombreSecretario, parametros.cargoSecretario, parametros.telefono, parametros.direccion, parametros.correo, parametros.logo FROM parametros INNER JOIN departamentos ON parametros.id_depto = departamentos.id_depto INNER JOIN municipios ON departamentos.id_depto = municipios.id_depto AND parametros.id_muni = municipios.id_muni WHERE parametros.eliminado = 0 AND parametros.id_depto = '$_SESSION[depto]' AND parametros.id_muni = '$_SESSION[muni]'");
+  $para = $con->consulta("SELECT parametros.nombreAlcalde, parametros.cargoAlcalde, parametros.nombreSecretario, parametros.cargoSecretario, parametros.telefono, parametros.direccion, parametros.correo, parametros.logo FROM parametros  WHERE parametros.eliminado = 0");
 
-  $jor = $con->consulta("SELECT periodoDesde, periodoHasta FROM jornadas WHERE eliminado = 0 AND estado = 'Activo' AND id_depa = '$_SESSION[depto]' AND id_muni = '$_SESSION[muni]' ");
+  $jor = $con->consulta("SELECT periodoDesde, periodoHasta FROM jornadas WHERE eliminado = 0 AND estado = 'Activo' ");
 
-  $da = $con->consulta("SELECT afiliacion, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui, cargo FROM afiliados WHERE eliminado <> 1 AND afiliados.id_depaPertenece = '$_SESSION[depto]' AND afiliados.id_muniPertenece = '$_SESSION[muni]' ORDER BY primerApellido ASC, segundoApellido ASC, primerNombre ASC");
+  $da = $con->consulta("SELECT afiliados, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui, cargo FROM afiliados WHERE eliminado <> 1  ORDER BY primerApellido ASC, segundoApellido ASC, primerNombre ASC");
 
 
 }
@@ -75,27 +75,8 @@ $jornada = $con->arreglo($jor);
 </head>
 
 <body>
-  <?php
-    if($_SESSION["rol"] == "Super")
-    {
-  ?>
-  <div class="row">
-    <div class="col-2 text-center">
-      <!--<img src="../parametros/logos/<?php //echo $parametro["logo"]; ?>" width="81" height="91">--->
-    </div>
-    <div class="col text-center">  
-      <h1>PADRÓN ELECTORAL</h1>
-      <h2>GENERAL </h2>
-      <h4>ELECCIÓN DE MIEMBRA O MIEMBRO PROPIETARIO Y SUPLENTE DE LA COMISIÓN DE ÉTICA GUBERNAMENTAL DE LA MUNICIPALIDAD DE <?php echo strtoupper($parametro["municipio"]); if($con->conteo($jor) > 0){  ?> EN EL PERIODO DE <?php echo date('d/m/Y', strtotime($jornada["periodoDesde"])); ?> A <?php echo date('d/m/Y', strtotime($jornada["periodoHasta"])); } ?></h4>
-    </div>
-    <div class="col-2 text-center">
-       <img src="../plantilla/dist/img/Escudo.fw.png" width="81" height="91">
-    </div>
-  </div>  
-  <?php
-    }
-    else
-    {
+ 
+  
   ?>
   <div class="row">
     <div class="col-2 text-center">
@@ -103,16 +84,14 @@ $jornada = $con->arreglo($jor);
     </div>
     <div class="col text-center">
       <h1>PADRÓN ELECTORAL</h1>
-      <h2>MUNICIPALIDAD DE <?php echo strtoupper($parametro["municipio"]); ?>, DEPARTAMENTO DE <?php echo strtoupper($parametro["depto"]); ?> </h1>
-      <h4>ELECCIÓN DE MIEMBRA O MIEMBRO PROPIETARIO Y SUPLENTE DE LA COMISIÓN DE ÉTICA GUBERNAMENTAL DE LA MUNICIPALIDAD DE <?php echo strtoupper($parametro["municipio"]); if($con->conteo($jor) > 0){  ?> EN EL PERIODO DE <?php echo date('d/m/Y', strtotime($jornada["periodoDesde"])); ?> A <?php echo date('d/m/Y', strtotime($jornada["periodoHasta"])); }  ?></h4>
+      <h2>MUNICIPALIDAD DE LA AGENCIA DE CIBERSEGURIDAD DEL ESTADO  </h1>
+      <h4>ELECCIÓN DE MIEMBRA O MIEMBRO PROPIETARIO Y SUPLENTE DE LA COMISIÓN DE ÉTICA GUBERNAMENTAL DE LA MUNICIPALIDAD DE LA AGENCIA DE CIBERSEGURIDAD DEL ESTADO EN EL PERIODO DE <?php echo date('d/m/Y', strtotime($jornada["periodoDesde"])); ?> A <?php echo date('d/m/Y', strtotime($jornada["periodoHasta"])); ?></h4>
     </div>
     <div class="col-2 text-center">
        <img src="../plantilla/dist/img/Escudo.fw.png" width="81" height="91">
     </div>
   </div>
-  <?php
-    }
-  ?>
+  
   <div class="row">
     <div class="col table-responsive">
       <table class="table table-bordered table-sm">

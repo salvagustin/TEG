@@ -178,7 +178,7 @@ function actualizaDatos() {
 
 function preguntarSiNo(id) {
 
-    alertify.confirm('Eliminar Datos', '¿Estas seguro de eliminar este registro?',
+    alertify.confirm('Cambiar estado del afiliado', '¿Estas seguro de cambiar estado de este registro?',
 
         function() {
 
@@ -192,7 +192,7 @@ function preguntarSiNo(id) {
 
                 'Advertencia!',
 
-                'Se detuvo la eliminacion',
+                'Se detuvo el cambio',
 
                 'warning'
 
@@ -230,7 +230,7 @@ function eliminarDatos(id) {
 
                     'Exito!',
 
-                    'Datos Eliminados con Exito!',
+                    'Estado cambiado con exito!',
 
                     'success'
 
@@ -242,7 +242,7 @@ function eliminarDatos(id) {
 
                     'Error!',
 
-                    'No se pudieron eliminar los datos!',
+                    'No se pudieron cambiar el estado!',
 
                     'error'
 

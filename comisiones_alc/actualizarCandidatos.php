@@ -18,7 +18,6 @@ if (isset($_POST["boton"]))
   $foto      = $_FILES['foto']['name'];
   $profesion = $_POST['profesion'];
   $domicilio = $_POST['domicilio'];
-  $cargoMuni = $_POST['cargoMuni'];
   $ruta      = "candidatos/fotos/";
 
   if($_SESSION["rol"] == "Super")
@@ -28,11 +27,11 @@ if (isset($_POST["boton"]))
 
     if (empty($foto)) 
     {
-      $sql = $con->consulta("UPDATE candidatos SET id_afiliado = '$candidato', id_depa = '$depto', id_muni = '$muni', edad = '$edad', domicilio = '$domicilio', profesion = '$profesion', cargoMuni = '$cargoMuni' WHERE  id_candidato = '$id'");
+      $sql = $con->consulta("UPDATE candidatos SET id_afiliado = '$candidato', edad = '$edad', domicilio = '$domicilio', profesion = '$profesion',  WHERE  id_candidato = '$id'");
     } 
     else 
     {
-      $sql = $con->consulta(" UPDATE candidatos SET id_afiliado = '$candidato', id_depa = '$depto', id_muni = '$muni', edad = '$edad', domicilio = '$domicilio', profesion = '$profesion', cargoMuni = '$cargoMuni', foto = '$foto' WHERE id_candidato = '$id'");
+      $sql = $con->consulta(" UPDATE candidatos SET id_afiliado = '$candidato', edad = '$edad', domicilio = '$domicilio', profesion = '$profesion',  foto = '$foto' WHERE id_candidato = '$id'");
       move_uploaded_file($_FILES['foto']['tmp_name'], $ruta . $_FILES['foto']['name']);
     }
   }
@@ -40,11 +39,11 @@ if (isset($_POST["boton"]))
   {
     if (empty($foto)) 
     {
-      $sql = $con->consulta("UPDATE candidatos SET id_afiliado = '$candidato', edad = '$edad', domicilio = '$domicilio', profesion = '$profesion', cargoMuni = '$cargoMuni' WHERE  id_candidato = '$id'");
+      $sql = $con->consulta("UPDATE candidatos SET id_afiliado = '$candidato', edad = '$edad', domicilio = '$domicilio', profesion = '$profesion' WHERE  id_candidato = '$id'");
     } 
     else 
     {
-      $sql = $con->consulta(" UPDATE candidatos SET id_afiliado = '$candidato', edad = '$edad', domicilio = '$domicilio', profesion = '$profesion', cargoMuni = '$cargoMuni', foto = '$foto' WHERE id_candidato = '$id'");
+      $sql = $con->consulta(" UPDATE candidatos SET id_afiliado = '$candidato', edad = '$edad', domicilio = '$domicilio', profesion = '$profesion' foto = '$foto' WHERE id_candidato = '$id'");
       move_uploaded_file($_FILES['foto']['tmp_name'], $ruta . $_FILES['foto']['name']);
     }
   }
@@ -145,7 +144,7 @@ else
                 <div class="row">
                   <div class="col">
                     <form   action="" method="post" enctype="multipart/form-data" id="form1" name="form1">
-                      <div class="card card-primary card-outline">
+                      <div class="card card-primary card-outline" style="border-top: 3px solid #131d2e;">
                         <div class="card-header bg-primary">
                           <h3 class="card-title">Actualizando los datos del candidato</h3>
                         </div>
@@ -209,48 +208,14 @@ else
                                 <input type="text" name="profesion" id="profesion" class="form-control" placeholder="Profesión del candidato" value="<?php echo $dato["profesion"]; ?>">
                               </div>
                             </div>
-                            <div class="col">
-                              <div class="form-group">
-                                <label for="">Cargo en la municipalidad</label>
-                                <input type="text" name="cargoMuni" id="cargoMuni" class="form-control" placeholder="Cago del candidato en la municipalidad" value="<?php echo $dato["cargoMuni"]; ?>">
-                              </div>
-                            </div>
+                            
                           </div>
-                          <?php if($_SESSION["rol"] == "Super"){ ?>
-                          <div class="row">
-                            <div class="col">
-                              <div class="form-group">
-                                <label for="">Departamento</label>
-                                <select name="depto" id="depto" class="form-control select2">
-                                  <?php 
-                                    $de = $con->consulta("SELECT * FROM departamentos WHERE eliminado = 0");
-                                    while($depto = $con->arreglo($de))
-                                    { 
-                                  ?>
-                                  <option value="<?php echo $depto["id_depto"] ?>" <?php if($dato["id_depa"] == $depto["id_depto"]){ echo "selected"; } ?> ><?php echo $depto["depto"]; ?></option>
-                                  <?php 
-                                    } 
-                                  ?>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="col">
-                              <div class="form-group">
-                                <label for="">Municipio</label>
-                                <select name="muni" id="muni" class="form-control select2">
-                                  <?php $mu = $con->consulta("SELECT * FROM municipios WHERE eliminado = 0");
-                                  while($muni = $con->arreglo($mu)){ ?>
-                                  <option value="<?php echo $muni["id_muni"] ?>" <?php if($dato["id_muni"] == $muni["id_muni"]){ echo "selected"; } ?> ><?php echo $muni["municipio"]; ?></option>
-                                  <?php } ?>
-                                </select>
-                              </div>
-                            </div>
-                          </div>
-                          <?php } ?>
+                          
+                           
                         </div>
                         * Datos obligatorios
                         <div class="card-footer text-center">
-                          <button type="submit" class="btn btn-primary" id="boton" name="boton"><i class="far fa-save"></i> Actualizar datos</button>
+                          <button type="submit" class="btn btn-primary" id="boton" name="boton" style="background-color:#131d2e; border-color: #131d2e; "><i class="far fa-save"></i> Actualizar datos</button>
                         </div>
                       </div>
                     </form>

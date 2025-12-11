@@ -32,7 +32,7 @@ if($con->conteo($bus)==1)
         $jor = $con->consulta("SELECT id_jornada FROM jornadas WHERE fecha = '$fecha' AND '$hora' BETWEEN horaDesde AND horaHasta AND estado = 'ACTIVO'");
 if ($con->conteo($jor) == 0) {
     ?>
-      <button class="btn btn-primary" data-toggle="modal" data-target="#modalNuevo">
+      <button class="btn btn-primary" data-toggle="modal" data-target="#modalNuevo" style="background-color:#131d2e; border-color: #131d2e; ">
         <i class="ion ion-plus"></i> Nueva jornada
       </button>
       <?php

@@ -41,7 +41,7 @@ $lugar = "jornadas";
 
 
 
-$histo = $con->consulta("INSERT INTO historial VALUES(NULL, '$_SESSION[id]', '$fechas', '$detalle', '$lugar', '$id', 'Activo')");
+$histo = $con->consulta("INSERT INTO historial VALUES(NULL, '$_SESSION[id]', '$fechas', '$detalle', '$lugar', '$id', '$estado')");
 
 
 

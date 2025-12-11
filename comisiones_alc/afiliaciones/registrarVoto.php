@@ -26,15 +26,13 @@ $hora = date("H:i:s");
 <body class="hold-transition layout-top-nav">
 <div class="wrapper">
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
-    <div class="container">
-      <a href="#" class="navbar-brand">
-        <img src="../parametros/logos/<?php echo $para["logo"]; ?>" class="brand-image img-circle elevation-3"
-             style="opacity: .8">
-        
-      </a>
-    </div>
-  </nav>
+  <nav class="main-header navbar navbar-expand-md navbar-light navbar-white" style="background-color:#131d2e; ">
+      <div class="container">
+        <a href="#" class="navbar-brand">
+          <img src="../plantilla/dist/img/ACELogoBlanco.png" width="230">
+        </a>
+      </div>
+    </nav>
   <div class="content-wrapper">
     <div class="content-header">
       <div class="container">
@@ -51,19 +49,19 @@ $hora = date("H:i:s");
 
             if($voto == "abstencion")
             {
-              $consulta = $con->consulta("INSERT INTO votacion VALUES(NULL, '$jornada', '$candi[id_candidato]', '$afiliado',  '$_SESSION[muni]', 0, 1, 0, '$fecha', '$hora', 0)");
+              $consulta = $con->consulta("INSERT INTO votacion VALUES(NULL, '$jornada', '$candi[id_candidato]', '$afiliado', 0, 1, 0, '$fecha', '$hora', 0)");
             ?>
             <div class="row">
               <div class="col">
                 <div class="card card-primary card-outline">
                   <div class="card-body text-center">
                       <div class="login-logo">
-                        <img src="../parametros/logos/<?php echo $para["logo"]; ?>" height="200" width="180">
+                        <img src="../plantilla/dist/img/ACEAzul.png" width="230">
                       </div>
                     <h3>¡Gracias por participar en este proceso de elección!</h3>
                   </div>
                   <div class="card-footer text-center">
-                    <a href="salir.php" class="btn btn-lg btn-primary">Finalizar</a>
+                    <a href="salir.php" class="btn btn-lg btn-primary" style="background-color: #131d2e; border-color: #131d2e; ">Finalizar</a>
                   </div>
                 </div>
               </div>
@@ -79,12 +77,12 @@ $hora = date("H:i:s");
                 <div class="card card-primary card-outline">
                   <div class="card-body text-center">
                       <div class="login-logo">
-                        <img src="../parametros/logos/<?php echo $para["logo"]; ?>" height="100" width="80">
+                        <img src="../plantilla/dist/img/ACEAzul.png" width="230">
                       </div>
                     <h3>¡Gracias por participar en este proceso de elección!</h3>
                   </div>
                   <div class="card-footer text-center">
-                    <a href="salir.php" class="btn btn-lg btn-primary">Finalizar</a>
+                    <a href="salir.php" class="btn btn-lg btn-primary" style="background-color: #131d2e; border-color: #131d2e; ">Finalizar</a>
                   </div>
                 </div>
               </div>
@@ -101,12 +99,12 @@ $hora = date("H:i:s");
                 <div class="card card-primary card-outline">
                   <div class="card-body text-center">
                       <div class="login-logo">
-                        <img src="../parametros/logos/<?php echo $para["logo"]; ?>" height="100" width="80">
+                        <img src="../plantilla/dist/img/ACEAzul.png" width="230">
                       </div>
                     <h3>¡Gracias por participar en este proceso de elección!</h3>
                   </div>
                   <div class="card-footer text-center">
-                    <a href="salir.php" class="btn btn-lg btn-primary">Finalizar</a>
+                    <a href="salir.php" class="btn btn-lg btn-primary" style="background-color: #131d2e; border-color: #131d2e; ">Finalizar</a>
                   </div>
                 </div>
               </div>

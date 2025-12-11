@@ -84,7 +84,7 @@ $con = new cnn();
           </script>
           
               
-<a href="afiliaciones/afiliacion.php" class="btn btn-primary "><i class="fas fa-file-download text-white"></i> Nuevo afiliado</a>
+<a href="afiliaciones/afiliacion.php" class="btn btn-primary " style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-file-download text-white"></i> Nuevo afiliado</a>
               
        
 
@@ -97,11 +97,11 @@ $conte2=$con->conteo($cont);
           if ($conte2<>0){       
           
           ?>
-           <a href="afiliados/descargarPadron.php" target="_blank" class="btn btn-primary text-white"><i class="fas fa-file-download" ></i> Reporte padrón electoral</a>
+           <a href="afiliados/descargarPadron.php" target="_blank" class="btn btn-primary text-white" style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-file-download" ></i> Reporte padrón electoral</a>
     
 <?php } else  { ?>
                
-   <a  onclick="showAlert2()" target="_blank" class="btn btn-primary text-white"><i class="fas fa-file-download"></i> Reporte padrón electoral</a>         
+   <a  onclick="showAlert2()" target="_blank" class="btn btn-primary text-white" style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-file-download"></i> Reporte padrón electoral</a>         
         <?php  }  ?>
       </div>
       
@@ -120,11 +120,12 @@ $conte2=$con->conteo($cont);
         <tr>
 
           <th>#</th>
-
           <th>Nombre completo</th>
-
           <th>DUI</th>
+          <th>Fecha de Nacimiento</th>
           <th>Cargo</th>
+          <th>Estado</th>
+          <th>Opciones</th>
         </tr>
 
       </thead>
@@ -137,7 +138,7 @@ $conte2=$con->conteo($cont);
 
         {
 
-          $sql = $con->consulta("SELECT afiliados.id,  afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada, afiliados.dui, afiliados.cargo,   afiliados.pregunta FROM afiliados ");
+          $sql = $con->consulta("SELECT afiliados.id,  afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada, afiliados.dui, afiliados.cargo,   afiliados.fechaNac, afiliados.eliminado FROM afiliados ");
 
         }
 
@@ -145,7 +146,7 @@ $conte2=$con->conteo($cont);
 
         {
 
-          $sql = $con->consulta("SELECT afiliados.id,  afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada, afiliados.dui, afiliados.cargo, afiliados.pregunta FROM afiliados ");
+          $sql = $con->consulta("SELECT afiliados.id,  afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada, afiliados.dui, afiliados.cargo, afiliados.fechaNac, afiliados.eliminado FROM afiliados ");
 
         }
 
@@ -163,8 +164,11 @@ $conte2=$con->conteo($cont);
 
             <td><?php echo $ver["dui"]; ?></td>
 
+            <td><?php echo $ver["fechaNac"]; ?></td>
+
             <td><?php echo $ver["cargo"]; ?></td>
 
+            <td><?php echo ($ver["eliminado"] == 0) ? "Activo" : "Inactivo"; ?></td>
             
 
             <td>

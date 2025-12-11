@@ -136,7 +136,7 @@ $con = new cnn();
                   </div>
 
                   <div class="card-footer text-center">
-                    <button type="submit" name="boton1" id="boton1" class="btn btn-primary" form="inventario"><i class="fas fa-file-download"></i> Generar reporte</button>
+                    <button type="submit" name="boton1" id="boton1" class="btn btn-primary" form="inventario" style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-file-download"></i> Generar reporte</button>
                   </div>
                 </div>
               </form>

@@ -52,34 +52,29 @@ $hora = date("H:i:s");
 </head>
 
 <body class="hold-transition login-page">
-  <div class="login-box">
-    <?php //$pa = $db->consulta("SELECT parametros.municipalidad, municipios.municipio, parametros.logo FROM parametros INNER JOIN municipios ON parametros.muni = municipios.id_muni WHERE parametros.eliminado = 0 AND parametros.estado = 'Activo'");
-    //if ($db->conteo($pa) > 0) {
-      //$para = $db->arreglo($pa); ?>
-      <div class="login-box">
+  <div class="login-box" style="margin-top: 30px;">
+    
+      <div class="login-box" style="border: 1px solid #131d2e;">
         <div class="login-logo">
-     <img src="../plantilla/dist/img/ACEAzul.png" width="300px">
-           <hr style="background: #131d2e;  border-top:5px solid rgba(0, 0, 0, 0.1)">
-               <a href="#" style="color:#004387;"><b>Sistema de Elecciones</b></a><br>
+     <img src="../plantilla/dist/img/ACEAzul.png" width="300px" style="margin-bottom: 10px;">
+               <a href="#" style="color:#004387; font-size: 1.2em;"><b>Sistema de Elecciones</b></a><br>
         <!--  <a href="#" style="color:#004387;"><b> <?php //echo $para["municipalidad"]; ?> <br><b><?php //echo $para["municipio"]; ?></b></a><br>-->
-          <a href="#" style="color:#004387;">Cabina virtual de votación </a>
+          
         </div>
-                <hr style="background: #131d2e;  border-top:5px solid rgba(0, 0, 0, 0.1)"> 
-      <?php //} ?>
+        <?php //} ?>
       <!-- /.login-logo -->
       <div class="card">
         <div class="card-body login-card-body">
-          <p class="login-box-msg">Iniciar sesión</p>
+          <div style="text-align: center; margin-bottom: 15px;">
+            <a href="#" style="color:#004387; font-size: 1.5em; font-weight: bold;">Cabina virtual de votación</a>
+          </div>
           <form action="" method="post">
-				<div class="form-check text-center">
-                	<input name="votarDUI" type="checkbox" class="form-check-input" id="votarDUI" value="si">
-                    <label class="form-check-label">Votar con DUI</label>
-           	</div>
+				
             <div class="input-group mb-3">
             </div>
             <div class="input-group mb-3">
               <!--<input type="text" class="form-control" placeholder="Codigo de acceso" name="codigo" autocomplete="off" data-inputmask='"mask": "99999999-9"' data-mask>-->
-              <input type="text" class="form-control" placeholder="DUI:99999999-9 ó Codigo de acceso" name="codigo" autocomplete="off" >
+              <input type="text" class="form-control" placeholder="Codigo de acceso" name="codigo" autocomplete="off" >
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-lock"></span> 
@@ -88,7 +83,7 @@ $hora = date("H:i:s");
             </div>
             <div class="row">
               <div class="col text-center">
-                <button type="submit" name="boton" class="btn btn-primary btn-block">Iniciar votación</button>
+                <button type="submit" name="boton" class="btn btn-primary btn-block" style="background-color:#131d2e; border-color: #131d2e; ">Iniciar votación</button>
               </div>
             </div>
           </form>
@@ -96,17 +91,12 @@ $hora = date("H:i:s");
           <?php
           if (isset($_POST["boton"])) 
           {
-            $votarDUI = $_POST["votarDUI"];
+            
             $codigo = $_POST["codigo"];
 			  
-			if($votarDUI == "si")
-			{
-				$consulta = $db->consulta("SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui, codigo FROM afiliados WHERE  dui = '$codigo'");
-			}
-			else
-			{
-				$consulta = $db->consulta("SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui, codigo FROM afiliados WHERE codigo = '$codigo'");
-			}
+			
+				$consulta = $db->consulta("SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui, codigo FROM afiliados WHERE eliminado <> 1 AND codigo = '$codigo'");
+			
             
 
             if ($db->conteo($consulta) > 0) {
@@ -164,17 +154,11 @@ $hora = date("H:i:s");
            <!-- <p class="mb-0">
               <a href="javascript:agregar('recuperar.php', 390, 670);" class="text-center">Clave olvidada ? Recupérala aquí </a>
             </p>-->
-			  <p class="mb-0">
-              <a href="preguntaValidarAfi.php" class="text-center">1. Activa tu cuenta para votar</a>
-            </p>
-            <p class="mb-0">
-              <a href="verificacion.php" class="text-center">2. Verifica si ya estás afiliado </a>
-            </p>
+			  
           </div>
         </div>
       </div>
       </div>
-             <hr style="background: #004387; border-top:5px solid rgba(0, 0, 0, 0.1)">
     <script src="../plantilla/plugins/inputmask/min/jquery.inputmask.bundle.min.js"></script>
     <script>
   $(function () {
