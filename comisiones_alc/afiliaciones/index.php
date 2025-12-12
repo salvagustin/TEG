@@ -66,7 +66,7 @@ $hora = date("H:i:s");
       <div class="card">
         <div class="card-body login-card-body">
           <div style="text-align: center; margin-bottom: 15px;">
-            <a href="#" style="color:#004387; font-size: 1.5em; font-weight: bold;">Cabina virtual de votación</a>
+            <h4 style="color:#004387;  font-weight: bold;">Cabina virtual de votación</h4>
           </div>
           <form action="" method="post">
 				

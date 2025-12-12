@@ -56,6 +56,7 @@ CREATE TABLE `adm_usuarios`  (
 
 -- ----------------------------
 -- Records of adm_usuarios
+-- SuperUser---V0tac10N3s$2025
 -- ----------------------------
 INSERT INTO `adm_usuarios` VALUES (1, 'admin', '202cb962ac59075b964b07152d234b70', 2, 'adminis', 'trador', '12345678', 'admin@admin.com', 'Activo');
 
@@ -75,8 +76,6 @@ CREATE TABLE `afiliados`  (
   `dui` varchar(15) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `fechaNac` date NULL DEFAULT NULL,
   `cargo` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `pregunta` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `respuesta` varchar(150) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `codigo` varchar(6) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `eliminado` varchar(5) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE

@@ -46,7 +46,7 @@ $hora = date("H:s:i");
                       <div class="col">
                         <div class="form-group">
                           <label for="segundoNombre">Segundo nombre</label>
-                          <input type="text" name="segundoNombre" id="segundoNombre" class="form-control text-uppercase">
+                          <input type="text" name="segundoNombre" id="segundoNombre" class="form-control text-uppercase" required>
                         </div>
                       </div>
                     </div>
@@ -60,7 +60,7 @@ $hora = date("H:s:i");
                       <div class="col">
                         <div class="form-group">
                           <label for="segundoApellido">Segundo apellido</label>
-                          <input type="text" name="segundoApellido" id="segundoApellido" class="form-control text-uppercase">
+                          <input type="text" name="segundoApellido" id="segundoApellido" class="form-control text-uppercase" required>
                         </div>
                       </div>
                     </div>
@@ -74,7 +74,7 @@ $hora = date("H:s:i");
                       <div class="col">
                         <div class="form-group">
                           <label for="sexo">Sexo</label>
-                          <select class="custom-select" id="sexo" name="sexo">
+                          <select class="custom-select" id="sexo" name="sexo" required>
                             <option value=""></option>
                             <option value="FEMENINO">FEMENINO</option>
                             <option value="MASCULINO">MASCULINO</option>
@@ -117,25 +117,7 @@ $hora = date("H:s:i");
                       </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col">
-                      <div class="form-group">
-                        <label for="">Pregunta de seguridad</label>
-                        <select name="pregunta" id="pregunta" class="form-control">
-                          <option value="Tu color favorito">Tu color favorito</option>
-                          <option value="Tu pelicula favorita">Tu pelicula favorita</option>
-                          <option value="Nombre de tu madre">Nombre de tu madre</option>
-                          <option value="Nombre de tu padre">Nombre de tu padre</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="form-group">
-                        <label for="">Respuesta</label>
-                        <input type="text" name="respuesta" id="respuesta" class="form-control">
-                      </div>
-                    </div>
-                  </div>
+                  
                 </div>
               <div class="card-footer text-center">
                 <button type="submit" class="btn btn-primary" id="boton" name="boton">
@@ -155,6 +137,19 @@ $hora = date("H:s:i");
     <script src="../plantilla/bootstrap/popper.min.js"></script>
     <script src="../plantilla/bootstrap/bootstrap.min.js"></script>
     <script src="../plantilla/bootstrap/jquery.min.js"></script>
-   
+    <script src="../plantilla/plugins/inputmask/min/jquery.inputmask.bundle.min.js"></script>
+    <script>
+  $(function () {
+    //Datemask dd/mm/yyyy
+    $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+    //Datemask2 mm/dd/yyyy
+    $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+    //Money Euro
+    $('[data-mask]').inputmask()
+    $("input[data-bootstrap-switch]").each(function(){
+      $(this).bootstrapSwitch('state', $(this).prop('checked'));
+    });
+  })
+</script>
 </body>
 </html>

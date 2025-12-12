@@ -97,6 +97,7 @@ $asis3 = substr($totalVotos, 2, 1);
   <link rel="stylesheet" href="../plantilla/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Toastr -->
   <link rel="stylesheet" href="../plantilla/plugins/toastr/toastr.min.css">
+  <link href="plantilla/dist/img/LogoESA.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
 </head>
 
 <body onload="window.print()">
@@ -106,7 +107,7 @@ $asis3 = substr($totalVotos, 2, 1);
     </div>
     <div class="col text-center">
       <h1>ACTA DE CIERRE Y ESCRUTINIO</h1>
-        <h4>ELECCIÓN DE LOS INTEGRANTES PROPIETARIO Y SUPLENTE DE LA COMISIÓN DE ÉTICA GUBERNAMENTAL, POR PARTE DE LOS EMPLEADOS Y EMPLEADAS DE LA MUNICIPALIDAD DE AGENCIA DE CIBERSEGURIDAD DEL ESTADO</h4>
+        <h4>ELECCIÓN DE LOS INTEGRANTES PROPIETARIO Y SUPLENTE DE LA COMISIÓN DE ÉTICA GUBERNAMENTAL, POR PARTE DE LOS EMPLEADOS Y EMPLEADAS DE LA  AGENCIA DE CIBERSEGURIDAD DEL ESTADO</h4>
     </div>
     <div class="col-2 text-center">
       <img src="../plantilla/dist/img/ACEAzul.png" width="81" height="91">
@@ -122,7 +123,7 @@ $asis3 = substr($totalVotos, 2, 1);
       <?php echo strtolower(trim(@$V->ValorEnLetras(date("d", strtotime($jornada["fecha"])), ' '))); ?> de
       <?php echo $fechaEleccion; ?> de 
 	    <?php echo strtolower(trim(@$V->ValorEnLetras(date("Y", strtotime($jornada["fecha"])), ' '))); ?>
-      . Se da por finalizada la votación para la elección del miembro (a) propietario (a) suplente de la Comisión de Ética Gubernamental de la municipalidad de , por parte de las empleadas y los empleados de la municipalidad. Se registraron en el sistema
+      . Se da por finalizada la votación para la elección del miembro (a) propietario (a) suplente de la Comisión de Ética Gubernamental de la AGENCIA DE CIBERSEGURIDAD DEL ESTADO, por parte de las empleadas y los empleados de la misma. Se registraron en el sistema
       <?php echo strtolower( trim( $V->ValorEnLetras(  $conteo[ "total" ], '' ) ) ) . " votos. ";?> La votación se desarrolló con normalidad no suscitándose ningún inconveniente. Al realizar el escrutinio correspondiente se obtuvo el siguiente resultado:</p>
     </div>
   </div>

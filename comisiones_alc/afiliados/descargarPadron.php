@@ -1,5 +1,5 @@
 <?php
-ini_set('default_charset', 'UTF8');
+ini_set('default_charset', 'UTF-8');
 require("../php/conexion.php");
 require "../seguro.php";
 
@@ -21,7 +21,7 @@ else
 
   $jor = $con->consulta("SELECT periodoDesde, periodoHasta FROM jornadas WHERE eliminado = 0 AND estado = 'Activo' ");
 
-  $da = $con->consulta("SELECT afiliados, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui, cargo FROM afiliados WHERE eliminado <> 1  ORDER BY primerApellido ASC, segundoApellido ASC, primerNombre ASC");
+  $da = $con->consulta("SELECT primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui, cargo FROM afiliados WHERE eliminado <> 1  ORDER BY primerApellido ASC, segundoApellido ASC, primerNombre ASC");
 
 
 }
@@ -36,7 +36,7 @@ $jornada = $con->arreglo($jor);
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin Registros | CEG</title>
+  <title>Votaciones ACE</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -72,23 +72,22 @@ $jornada = $con->arreglo($jor);
   <link rel="stylesheet" href="../plantilla/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Toastr -->
   <link rel="stylesheet" href="../plantilla/plugins/toastr/toastr.min.css">
+  <link href="plantilla/dist/img/LogoESA.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
 </head>
 
 <body>
  
-  
-  ?>
   <div class="row">
     <div class="col-2 text-center">
-      <img src="../parametros/logos/<?php echo $parametro["logo"]; ?>" width="81" height="91">
+      <img src="../plantilla/dist/img/LogoEsa.png" width="100" height="100">
     </div>
     <div class="col text-center">
       <h1>PADRÓN ELECTORAL</h1>
-      <h2>MUNICIPALIDAD DE LA AGENCIA DE CIBERSEGURIDAD DEL ESTADO  </h1>
-      <h4>ELECCIÓN DE MIEMBRA O MIEMBRO PROPIETARIO Y SUPLENTE DE LA COMISIÓN DE ÉTICA GUBERNAMENTAL DE LA MUNICIPALIDAD DE LA AGENCIA DE CIBERSEGURIDAD DEL ESTADO EN EL PERIODO DE <?php echo date('d/m/Y', strtotime($jornada["periodoDesde"])); ?> A <?php echo date('d/m/Y', strtotime($jornada["periodoHasta"])); ?></h4>
+      <h2>AGENCIA DE CIBERSEGURIDAD DEL ESTADO  </h1>
+      <h4>ELECCIÓN DE MIEMBRA O MIEMBRO PROPIETARIO Y SUPLENTE DE LA COMISIÓN DE ÉTICA GUBERNAMENTAL DE LA AGENCIA DE CIBERSEGURIDAD DEL ESTADO EN EL PERIODO DE <?php echo date('d/m/Y', strtotime($jornada["periodoDesde"])); ?> A <?php echo date('d/m/Y', strtotime($jornada["periodoHasta"])); ?></h4>
     </div>
     <div class="col-2 text-center">
-       <img src="../plantilla/dist/img/Escudo.fw.png" width="81" height="91">
+       <img src="../plantilla/dist/img/LogoEsa.png" width="81" height="91">
     </div>
   </div>
   

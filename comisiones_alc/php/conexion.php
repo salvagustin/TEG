@@ -15,12 +15,7 @@ private $conexion;
    {
       
    $this->conexion = (mysqli_connect("localhost","root","",'database')) or die(mysqli_error($this->conexion)); 
-    //$this->conexion = (mysqli_connect("localhost","teg","teg2020$$**","comi")) or
-   //$this->conexion = (mysqli_connect("localhost","root","","comi")) or die(mysqli_error($this->conexion));
-   //$connection = mysqli_connect($host,$usuario,$password, $basedatos);
-   //mysqli_query("SET NAMES 'utf8'");
-
-    //mysqli_select_db($this->conexion,"alc4arw3_comisiones") or die(mysqli_error($this->conexion));
+    
     mysqli_select_db($this->conexion,"database") or die(mysqli_error($this->conexion));
 
     mysqli_set_charset($this->conexion,"UTF8");

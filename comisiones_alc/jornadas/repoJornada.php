@@ -61,18 +61,20 @@ $jornada = $con->arreglo($jor);
   <link rel="stylesheet" href="../plantilla/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Toastr -->
   <link rel="stylesheet" href="../plantilla/plugins/toastr/toastr.min.css">
+  <link href="plantilla/dist/img/LogoESA.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
 </head>
 
 <body onload="window.print()">
   <div class="row">
     <div class="col-3 text-center">
-      <img src="../plantilla/dist/img/ACELogoAzul.png" width="200" height="91">
+      <img src="../plantilla/dist/img/LogoEsa.png" width="81" height="91">
     </div>
     <div class="col text-center">
-      <h1>REPORTE DE JORNADAS ELECTORALES </h1>  
+      <h2>AGENCIA DE CIBERSEGURIDAD DEL ESTADO </h2>  
+      <h3>REPORTE DE JORNADAS ELECTORALES </h3>  
  
     </div>
-    <div class="col-2 text-center">
+    <div class="col-3 text-center">
       <img src="../plantilla/dist/img/LogoEsa.png" width="81" height="91">
     </div>
   </div>
@@ -85,6 +87,7 @@ $jornada = $con->arreglo($jor);
      <table class="table table-bordered table-hover">
     <thead class="thead-light">
       <th scope="col">FECHA</th>
+      <th scope="col">DESCRIPCION</th>
       <th scope="col">PERIODO</th>
       <th scope="col">CANDIDATOS</th>
     <th scope="col">VOTOS TOTALES</th>
@@ -94,7 +97,7 @@ $jornada = $con->arreglo($jor);
 <?php
 
     
-$dato=$con->consulta("SELECT jornadas.id_jornada, jornadas.fecha, jornadas.horaDesde, jornadas.horaHasta, jornadas.periodoDesde, jornadas.periodoHasta   FROM jornadas  WHERE jornadas.fecha >= '$Desde' AND jornadas.fecha <= '$Hasta'");
+$dato=$con->consulta("SELECT jornadas.id_jornada, jornadas.fecha, jornadas.horaDesde, jornadas.horaHasta, jornadas.periodoDesde, jornadas.periodoHasta, jornadas.descripcion   FROM jornadas  WHERE jornadas.fecha >= '$Desde' AND jornadas.fecha <= '$Hasta'");
     
 
         
@@ -104,7 +107,7 @@ $dato=$con->consulta("SELECT jornadas.id_jornada, jornadas.fecha, jornadas.horaD
         ?>
       <tr>
         <td><?php echo  $dat["fecha"] ?></td>
-       
+       <td><?php echo  $dat["descripcion"] ?></td>
         <td >    <?php echo date('m/Y', strtotime($dat["periodoDesde"]))." ".date('H:i a', strtotime($dat["horaDesde"])); ?> al   <?php echo date('m/Y', strtotime($dat["periodoHasta"]))." ".date('H:i a', strtotime($dat["horaHasta"])); ?></td>
           
         

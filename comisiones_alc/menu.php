@@ -58,6 +58,11 @@
 
                 </ul>
             </li>
+            
+        <?php
+            break;
+        case "Super":
+        ?>
             <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-tools"></i>
@@ -87,40 +92,6 @@
                     </li>
 
                 </ul>
-            </li>
-        <?php
-            break;
-        case "Técnico":
-        ?>
-            <li class="nav-item has-treeview">
-                <a href="afiliaciones/" class="nav-link" target="_blank">
-                    <i class="nav-icon fas fa-user-check"></i>
-                    <p>Iniciar votación</p>
-                </a>
-            </li>
-            <li class="nav-item has-treeview">
-                <a href="afiliaciones.php" class="nav-link">
-                    <i class="nav-icon fas fa-users"></i>
-                    <p>Afiliaciones</p>
-                </a>
-            </li>
-            <li class="nav-item has-treeview">
-                <a href="jornadas.php" class="nav-link">
-                    <i class="fas fa-tasks nav-icon"></i>
-                    <p>Jornadas electorales</p>
-                </a>
-            </li>
-            <li class="nav-item has-treeview">
-                <a href="candidatos.php" class="nav-link">
-                    <i class="nav-icon fas fa-user-friends"></i>
-                    <p>Candidatos</p>
-                </a>
-            </li>
-            <li class="nav-item has-treeview">
-                <a href="escrutinio.php" class=" nav-link">
-                    <i class="nav-icon fas fa-poll-h"></i>
-                    <p>Escrutinio</p>
-                </a>
             </li>
             
     <?php

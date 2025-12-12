@@ -2,6 +2,8 @@
 ini_set('default_charset', 'UTF8');
 require("seguro.php");
 require("php/conexion.php");
+require __DIR__ . '/config.php';
+require PHP_PATH . 'session_timeout.php';
 $con = new cnn();
 ?>
 

@@ -95,9 +95,8 @@ $can = $con->consulta("SELECT afiliados.primerNombre, afiliados.segundoNombre, a
 
                         <div class="col text-center">
 
-                            <h1 class="m-0 text-dark"> ELECCION INTERNA PARA EL PUESTO DE  <?php echo ($periodo["descripcion"]) ; ?>
-                                DE LA AGENCIA DE CIBERSEGURIDAD DEL ESTADO, POR PARTE DE LAS Y LOS EMPLEADOS DE LA AGENCIA, 
-                                PARA EL PERIODO <?php echo date('m/Y', strtotime($periodo["periodoDesde"])); ?> - <?php echo date('m/Y', strtotime($periodo["periodoHasta"])); ?></h1>
+                            <h3 class="m-0 text-dark"> ELECCIONES INTERNAS DE LA AGENCIA DE CIBERSEGURIDAD DEL ESTADO</h3>
+                               <h3 class="m-0 text-dark" > PARA EL PERIODO <?php echo date('m/Y', strtotime($periodo["periodoDesde"])); ?> - <?php echo date('m/Y', strtotime($periodo["periodoHasta"])); ?></h3>
 
                         </div><div class="col-12 text-center mt-3"> <div class="card-body" style="padding: 10px 5px; background-color: #f8f9fa; border-radius: 5px;">
                                 <P class="text-center" style="font-size:1.2em; margin-bottom: 0;">

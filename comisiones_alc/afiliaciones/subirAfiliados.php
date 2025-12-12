@@ -16,11 +16,11 @@ $hora = date( "H:i:s" );
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registros</title>
+<title>Votaciones ACE</title>
 <link rel="stylesheet" href="../plantilla/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="../plantilla/plugins/fontawesome-free/css/all.min.css">
 <script src="../plantilla/alertifyjs/alertify.js"></script>
-<link href="../plantilla/dist/img/icon.jpg" rel="shortcut icon" type="image/vnd.microsoft.icon">
+<link href="plantilla/dist/img/LogoESA.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
 <script>
   function fileValidation() {
     var fileInput = document.getElementById('archivo');
@@ -85,64 +85,28 @@ $hora = date( "H:i:s" );
             $apellido3 = trim( $sheet->getCell( "E" . $row )->getValue() );
             $sexo = trim( $sheet->getCell( "F" . $row )->getValue() );
             $DUI = trim( $sheet->getCell( "G" . $row )->getValue() );
-            $NIT = "";
-            $fecha_na = "";
-            $depto = trim( $sheet->getCell( "H" . $row )->getValue() );
-            $muni = trim( $sheet->getCell( "I" . $row )->getValue() );
-            $fechaExpeDu = trim( $sheet->getCell( "J" . $row )->getValue() );
-            $depaResi = trim( $sheet->getCell( "H" . $row )->getValue() );
-            $muniResi = trim( $sheet->getCell( "I" . $row )->getValue() );
-            $direc = "";
-            $telefono = "";
-            $celular = "";
-            $telefonoT = "";
-            $cargo = trim( $sheet->getCell( "K" . $row )->getValue() );
-            $depaPerte = trim( $sheet->getCell( "H" . $row )->getValue() );
-            $muniperte = trim( $sheet->getCell( "I" . $row )->getValue() );
-            //$fecha_nac = date("Y-m-d", strtotime($fecha_na));
-          //   $fechaExpeDui = date("Y-m-d", strtotime($fechaExpeDu));
-		$fecha_nac = '2022-01-01';
-		$fechaExpeDui = '2022-01-01';
+            $fecha_na = trim( $sheet->getCell( "H" . $row )->getValue() );;
+            $cargo = trim( $sheet->getCell( "I" . $row )->getValue() );
 
 
-            if ( empty( $nombre1 ) )
-
-            {
-
-            } else {
-
-
-                    $busmuni = $con->consulta( "SELECT	departamentos.id_depto, municipios.id_muni FROM	departamentos	INNER JOIN	municipios	ON 	departamentos.id_depto = municipios.id_depto WHERE depto LIKE '%$depto%' and municipio LIKE'%$muni%'" );
-                    $idmuni = $con->arreglo( $busmuni );
-                    $depa1 = $idmuni[ "id_depto" ];
-                    $muni1 = $idmuni[ "id_muni" ];
-                    /////////////            
-                    $busmuni = $con->consulta( "SELECT	departamentos.id_depto, municipios.id_muni FROM	departamentos	INNER JOIN	municipios	ON 	departamentos.id_depto = municipios.id_depto WHERE depto LIKE '%$depaResi%' and municipio LIKE'%$muniResi%'" );
-                    $idmuni = $con->arreglo( $busmuni );
-                    $depa2 = $idmuni[ "id_depto" ];
-                    $muni2 = $idmuni[ "id_muni" ];
-                    ///////////////     
-                    $busmuni = $con->consulta( "SELECT	departamentos.id_depto, municipios.id_muni FROM	departamentos	INNER JOIN	municipios	ON 	departamentos.id_depto = municipios.id_depto WHERE depto LIKE '%$depaPerte%' and municipio LIKE'%$muniperte%'" );
-                    $idmuni = $con->arreglo( $busmuni );
-                    $depa3 = $idmuni[ "id_depto" ];
-                    $muni3 = $idmuni[ "id_muni" ];
+            
                     ////////////////      
                $bus=$con->consulta("SELECT id FROM afiliados WHERE	dui = '$DUI' AND eliminado <> '1' "); 
                
             if($con->conteo($bus) == 0){
 					
 				//if($fechaExpeDui==$fech){
-					   $insertar = $con->consulta( "INSERT INTO afiliados VALUES (NULL, '$i', '$nombre1', '$nombre2', '$apellido1', '$apellido2', '$apellido3', '$sexo', '$DUI', '$NIT', '$fecha_nac', '$depa1', '$muni1', '$fechaExpeDui', '$depa2', '$muni2', '$direc', '$telefono', '$celular', '$telefonoT', '$cargo', NULL, NULL, NULL, '$hora', '$fechas','$depa3','$muni3', 2)" );
+					   $insertar = $con->consulta( "INSERT INTO afiliados VALUES ( '$i', '$nombre1', '$nombre2', '$apellido1', '$apellido2', '$apellido3', '$sexo', '$DUI',  '$fecha_nac',   '$cargo', NULL)" );
 				//}		
                  
                 }        
               $i++;
-            } 
+            
 
     
     }
       
-$conteoo=$con->consulta("SELECT	afiliados.id FROM	afiliados WHERE	afiliados.eliminado = 2 AND	afiliados.id_depaPertenece = '$depa3' AND afiliados.id_muniPertenece = '$muni3'");
+$conteoo=$con->consulta("SELECT	afiliados.id FROM	afiliados WHERE	afiliados.eliminado = 2 ");
 $conte=$con->conteo($conteoo);
       
 

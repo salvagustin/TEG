@@ -23,28 +23,21 @@ if($con->conteo($bus)==1)
     <h3 class="card-title">Administracion de jornadas electorales</h3>
     <div align="right">
       <?php 
-      if($_SESSION["rol"]=="Super")
-      {
-        $jor = $con->consulta("SELECT id_jornada FROM jornadas WHERE fecha = '$fecha' AND '$hora' BETWEEN horaDesde AND horaHasta");
-      }
-      else
-      {
-        $jor = $con->consulta("SELECT id_jornada FROM jornadas WHERE fecha = '$fecha' AND '$hora' BETWEEN horaDesde AND horaHasta AND estado = 'ACTIVO'");
-if ($con->conteo($jor) == 0) {
-    ?>
-      <button class="btn btn-primary" data-toggle="modal" data-target="#modalNuevo" style="background-color:#131d2e; border-color: #131d2e; ">
-        <i class="ion ion-plus"></i> Nueva jornada
-      </button>
-      <?php
+      $jor = $con->consulta("SELECT id_jornada FROM jornadas WHERE fecha = '$fecha' AND '$hora' BETWEEN horaDesde AND horaHasta AND eliminado = 0 ");
+        if ($con->conteo($jor) == 0) {
+            ?>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#modalNuevo" style="background-color:#131d2e; border-color: #131d2e; ">
+                <i class="ion ion-plus"></i> Nueva jornada
+              </button>
+              <?php
 
-} else {
+        } else {
 
-    echo "No se puede agregar Jornada porque hay una Activa";
+            echo "No se puede agregar Jornada porque hay una Activa";
 
-}
+        }
 
 
-      }
   
         ?>
 
@@ -66,22 +59,16 @@ if ($con->conteo($jor) == 0) {
           <th>Hasta</th>
           <th>fecha de inicio</th>
           <th>fecha de finalización</th>
-          
+          <th>Votacion</th>
           <th>Estado</th>
           <th>Opciones</th>
         </tr>
       </thead>
       <tbody>
         <?php
-        if($_SESSION["rol"] == "Administrador")
-        {
-          $sql = $con->consulta("SELECT jornadas.* FROM jornadas ");
-
-        }
-        else
-        {
-          $sql = $con->consulta("SELECT jornadas.* FROM jornadas ");
-        }
+        
+        $sql = $con->consulta("SELECT jornadas.* FROM jornadas ");
+        
         $i = 0;
         while ($ver = $con->arreglo($sql)) { $i++;
 
@@ -98,9 +85,16 @@ if ($con->conteo($jor) == 0) {
             <td><?php echo date('d/m/Y', strtotime($ver["periodoHasta"])); ?></td>
             
             <td  <?php if($ver["estado"]=="CERRADO"){ ?> class=" bg-gradient-secondary" <?php } else { ?> class="bg-gradient-success " <?php } ?> > <?php echo $ver["estado"]; ?></td>
+            <td><?php echo ($ver["eliminado"] == 0) ? "Activo" : "Archivada"; ?></td>            
             <td>
-              <button class="btn btn-warning" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?php echo $datos; ?>')" title="Editar Jornada"><i class="far fa-edit"></i></button>
-              <button class="btn btn-danger" onclick="preguntarSiNo('<?php echo $ver['id_jornada']; ?>')" title="Eliminar Jornada"><i class="fas fa-trash-alt"></i></button>
+              <?php 
+                if ($ver["eliminado"] == 0) { 
+                ?>
+                    <button class="btn btn-danger" onclick="preguntarSiNo('<?php echo $ver['id_jornada']; ?>')" title="Cerrar y Archivar Jornada"><i class="fas fa-lock"></i></button>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?php echo $datos; ?>')" title="Editar Jornada"><i class="far fa-edit"></i></button>
+                  <?php 
+                } 
+                ?>
             </td>
           </tr>
         <?php } ?>

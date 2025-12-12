@@ -2,6 +2,8 @@
 ob_start();
 ini_set('default_charset', 'UTF8');
 require("php/conexion.php");
+require __DIR__ . '/config.php';
+require PHP_PATH . 'session_timeout.php';
 $db = new cnn();
 $fecha = date("Y-m-d");
 ?>
@@ -46,9 +48,11 @@ $fecha = date("Y-m-d");
     }
   </script>
 </head>
-<body class="hold-transition login-page" style="background-image: url('plantilla/dist/img/background2.jpeg');">
+<body class="hold-transition login-page" style="
+    background-image: url('plantilla/dist/img/background2.jpeg'); background-size: cover; background-repeat: no-repeat;    
+    background-position: center; min-height: 100vh;">
   
-      <div class="login-box">
+      <div class="login-box" >
         <div class="login-logo">
             <img src="plantilla/dist/img/ACEAzul.png" width="300px" style="padding-top: 10px;">
           <a  style="color:#131d2e;"><b>Sistema de Elecciones</b></a>
@@ -56,8 +60,8 @@ $fecha = date("Y-m-d");
       <?php //} ?>
         <!-- /.login-logo -->
         
-            <div class="card-body login-card-body">
-                <p class="login-box-msg" style="color:#004387;">Iniciar sesión</p>
+            <div class="card-body login-card-body " style="padding: 10px;">
+                <p class="login-box-msg" style="color:#004387; padding:5px;">Iniciar sesión</p>
                 <form action="" method="post">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Usuario" name="usu" autocomplete="off">
@@ -76,7 +80,7 @@ $fecha = date("Y-m-d");
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col text-center">
+                        <div class="col text-center" >
                             <button type="submit" name="boton" class="btn btn-primary btn-block">Iniciar sesión</button>
                         </div>
                     </div>

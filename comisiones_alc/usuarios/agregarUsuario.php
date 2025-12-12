@@ -87,36 +87,14 @@
 <div class="col">
 </div>
 </div>
-<div class="row">
-<div class="col">
-<div class="form-group">
-<label for="">Departamento</label>
-<select name="deptoExpe" id="deptoExpe" class="form-control select2">
-<?php 
-$de = $con->consulta("SELECT * FROM departamentos WHERE eliminado = 0");
-while($depto = $con->arreglo($de)){ 
-?>
-<option value="<?php echo $depto["id_depto"]; ?>"><?php echo $depto["depto"];?></option>
-<?php } ?>
-</select>
-</div> 
-</div>
-<div class="col">
-<div class="form-group">
-<label for="">Municipio</label>
-<select name="muniExpe" id="muniExpe" class="form-control select2">
-</select>
-</div> 
-</div>
 
-</div>
 
 <div class="row">
 
    <div class="col">        
 <label>Rol</label>
 <?php 
-       $ro = $con->consulta("SELECT * FROM adm_rol where rol <> '1'");  ?>
+       $ro = $con->consulta("SELECT * FROM adm_rol where rol == '1'");  ?>
 <select id="rol" class="form-control select2" style="width: 100%;">
 <?php while($rol = $con->arreglo($ro)){ ?>
                 <option value="<?php echo $rol["rol"]; ?>"><?php echo $rol["con"]; ?> </option>
@@ -130,54 +108,7 @@ while($depto = $con->arreglo($de)){
     <script src="plantilla/bootstrap/popper.min.js"></script>
     <script src="plantilla/bootstrap/bootstrap.min.js"></script>
     <script src="plantilla/bootstrap/jquery.min.js"></script>              
-    <script type="text/javascript">
-        
-	    $(document).ready(function()
-      {
-		    $('#deptoExpe').val(0);
-		    recargardeptoExpe();
-		    $('#deptoExpe').change(function()
-        {
-			    recargardeptoExpe();
-		    });
-	    })
-
-	    function recargardeptoExpe()
-      {
-		    $.ajax({
-			  type:"POST",
-			  url:"usuarios/deptoExpe.php",
-			  data:"continente=" + $('#deptoExpe').val(),
-			  success:function(r)
-        {
-				  $('#muniExpe').html(r);
-			  }
-	  	  });
-	    }
-
-	    $(document).ready(function()
-      {
-		    $('#depto').val(0);
-		    recargardepto();
-		    $('#depto').change(function()
-        {
-			    recargardepto();
-		    });
-	    })
-
-	    function recargardepto()
-      {
-		    $.ajax({
-			  type:"POST",
-			  url:"usuarios/muni.php",
-			  data:"continente=" + $('#depto').val(),
-			  success:function(r)
-        {
-				  $('#muni').html(r);
-			  }
-	  	  });
-	    }
-    </script>
+    
               
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
