@@ -112,7 +112,7 @@ $hora = date("H:s:i");
                   <div class="row">
                     <div class="col">
                       <div class="form-group">
-                        <label for="">Cargo según planilla</label>
+                        <label for="">Nombre de la plaza</label>
                         <input type="text" name="cargo" id="cargo" class="form-control">
                       </div>
                     </div>

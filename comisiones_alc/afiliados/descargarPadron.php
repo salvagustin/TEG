@@ -97,7 +97,7 @@ $jornada = $con->arreglo($jor);
         <thead>
           <th class="text-center">No.</th>
           <th class="text-center">APELLIDOS, NOMBRES</th>
-          <th class="text-center">CARGO</th>
+          <th class="text-center">PLAZA</th>
           <th class="text-center">DUI</th>
           <th class="text-center" style="width: 18rem">FIRMA</th>
         </thead>

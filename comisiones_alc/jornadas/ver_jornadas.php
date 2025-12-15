@@ -22,24 +22,24 @@ if($con->conteo($bus)==1)
   <div class="card-header">
     <h3 class="card-title">Administracion de jornadas electorales</h3>
     <div align="right">
-      <?php 
-      $jor = $con->consulta("SELECT id_jornada FROM jornadas WHERE fecha = '$fecha' AND '$hora' BETWEEN horaDesde AND horaHasta AND eliminado = 0 ");
-        if ($con->conteo($jor) == 0) {
-            ?>
-              <button class="btn btn-primary" data-toggle="modal" data-target="#modalNuevo" style="background-color:#131d2e; border-color: #131d2e; ">
-                <i class="ion ion-plus"></i> Nueva jornada
-              </button>
-              <?php
+     <?php
+      $sql = "SELECT COUNT(id_jornada) AS total_activas FROM jornadas WHERE eliminado = 0 ";
+      $jor = $con->consulta($sql); 
 
-        } else {
-
-            echo "No se puede agregar Jornada porque hay una Activa";
-
-        }
-
-
-  
-        ?>
+      $fila = mysqli_fetch_array($jor); 
+      $total_activas = (int)$fila[0]; 
+    
+      if ($total_activas < 1) { 
+          
+          ?>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modalNuevo" style="background-color:#131d2e; border-color: #131d2e; ">
+              <i class="ion ion-plus"></i> Nueva jornada
+            </button>
+          <?php
+      } else {
+          echo "No se puede agregar Jornada porque hay una Activa";
+      }
+      ?>
 
     </div>
 
@@ -90,8 +90,8 @@ if($con->conteo($bus)==1)
               <?php 
                 if ($ver["eliminado"] == 0) { 
                 ?>
-                    <button class="btn btn-danger" onclick="preguntarSiNo('<?php echo $ver['id_jornada']; ?>')" title="Cerrar y Archivar Jornada"><i class="fas fa-lock"></i></button>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?php echo $datos; ?>')" title="Editar Jornada"><i class="far fa-edit"></i></button>
+                    <button class="btn btn-danger" onclick="preguntarSiNo('<?php echo $ver['id_jornada']; ?>')" title="Cerrar y Archivar Jornada"><i class="fas fa-lock"></i></button>
                   <?php 
                 } 
                 ?>

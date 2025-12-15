@@ -45,8 +45,8 @@ $con = new cnn();
             <td><?php echo date('d/m/Y', strtotime($ver["periodoDesde"])); ?> al <?php echo date('d/m/Y', strtotime($ver["periodoHasta"])); ?></td>
             <td><?php echo ($ver["eliminado"] == 0) ? "Activo" : "Inactivo"; ?></td>     
             <td>
-              <a href="<?php echo "actualizarCandidatos.php?id=". base64_encode($ver["id_candidato"]);?>" class="btn btn-warning" title="Editar Datos"><i class="far fa-edit"></i></a>
-              <button class="btn btn-danger" onclick="preguntarSiNo('<?php echo $ver['id_candidato']; ?>')" title="Eliminar Afiliado"><i class="fas fa-trash-alt"></i></button>
+              <a href="<?php echo "actualizarCandidatos.php?id=". base64_encode($ver["id_candidato"]);?>" class="btn btn-primary" title="Editar Datos"><i class="far fa-edit"></i></a>
+              <button class="btn btn-danger" onclick="preguntarSiNo('<?php echo $ver['id_candidato']; ?>')" title="Eliminar Afiliado"><i class="fas fa-lock"></i></button>
             </td>
           </tr>
         <?php } ?>

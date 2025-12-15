@@ -19,8 +19,6 @@ if (isset($_POST["boton"]))
     $cargoSecretario = $_POST['cargoSecretario'];
     $telefono = $_POST['telefono'];
     $direc = $_POST['direc'];
-    $depa = $_POST['depa'];
-    $muni = $_POST['muni'];
     $correo = $_POST['correo'];
     $paginaW = $_POST['paginaW'];
     $miembro1W = $_POST['miembro1W'];
@@ -42,12 +40,12 @@ if (isset($_POST["boton"]))
 
     if (empty($logo)) {
 
-        $sql = $con->consulta("UPDATE parametros SET id_depto = '$depa', id_muni = '$muni', municipalidad = '$municipalidad', nombreAlcalde = '$nombreAlcalde', cargoAlcalde = '$cargoAlcalde', nombreSecretario = '$nombreSecretario', cargoSecretario = '$cargoSecretario', telefono = '$telefono', direccion = '$direc', correo = '$correo', paginaweb = '$paginaW', miembro1 = '$miembro1W', miembro2 = '$miembro2W', miembro3 = '$miembro3W', cargo1 = '$cargo1W', cargo2 = '$cargo2W', cargo3 = '$cargo3W', observador = '$observador', observador2 = '$observador2', observador3 = '$observador3', cargo_observador = '$cargoobservador', cargo_observador2 = '$cargoobservador2', cargo_observador3 = '$cargoobservador3' WHERE id_parametro = '$id' ");
+        $sql = $con->consulta("UPDATE parametros SET  nombreAlcalde = '$nombreAlcalde', cargoAlcalde = '$cargoAlcalde', nombreSecretario = '$nombreSecretario', cargoSecretario = '$cargoSecretario', telefono = '$telefono', direccion = '$direc', correo = '$correo', paginaweb = '$paginaW', miembro1 = '$miembro1W', miembro2 = '$miembro2W', miembro3 = '$miembro3W', cargo1 = '$cargo1W', cargo2 = '$cargo2W', cargo3 = '$cargo3W', observador = '$observador', observador2 = '$observador2', observador3 = '$observador3', cargo_observador = '$cargoobservador', cargo_observador2 = '$cargoobservador2', cargo_observador3 = '$cargoobservador3' WHERE id_parametro = '$id' ");
         ///son img
     } 
     else 
     {
-        $sql = $con->consulta("UPDATE parametros SET id_depto = '$depa', id_muni = '$muni', municipalidad = '$municipalidad', nombreAlcalde = '$nombreAlcalde', cargoAlcalde = '$cargoAlcalde', nombreSecretario = '$nombreSecretario', cargoSecretario = '$cargoSecretario', telefono = '$telefono', direccion = '$direc', correo = '$correo', paginaweb = '$paginaW', logo = '$logo', miembro1 = '$miembro1W', miembro2 = '$miembro2W', miembro3 = '$miembro3W', cargo1 = '$cargo1W', cargo2 = '$cargo2W', cargo3 = '$cargo3W', observador = '$observador', observador2 = '$observador2', observador3 = '$observador3', cargo_observador = '$cargoobservador', cargo_observador2 = '$cargoobservador2', cargo_observador3 = '$cargoobservador3' WHERE id_parametro = '$id'");
+        $sql = $con->consulta("UPDATE parametros SET  nombreAlcalde = '$nombreAlcalde', cargoAlcalde = '$cargoAlcalde', nombreSecretario = '$nombreSecretario', cargoSecretario = '$cargoSecretario', telefono = '$telefono', direccion = '$direc', correo = '$correo', paginaweb = '$paginaW', logo = '$logo', miembro1 = '$miembro1W', miembro2 = '$miembro2W', miembro3 = '$miembro3W', cargo1 = '$cargo1W', cargo2 = '$cargo2W', cargo3 = '$cargo3W', observador = '$observador', observador2 = '$observador2', observador3 = '$observador3', cargo_observador = '$cargoobservador', cargo_observador2 = '$cargoobservador2', cargo_observador3 = '$cargoobservador3' WHERE id_parametro = '$id'");
 
         move_uploaded_file($_FILES['logo']['tmp_name'], $ruta . $logo);
 
@@ -179,35 +177,7 @@ else
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col">
-                                                    <div class="form-group">
-             			                                <label for="depto">Departamento</label>
-									                    <select name="depa" id="depa" class="form-control select2">
-                                                            <?php 
-                                                                $de = $con->consulta("SELECT * FROM departamentos WHERE eliminado = 0");
-                                                                while ($depto = $con->arreglo($de)) {
-
-                                                            ?>
-                                                            <option value="<?php echo $depto["id_depto"]; ?>" <?php if ($dato["id_depto"] == $depto["id_depto"]) { echo "selected"; } ?> ><?php echo $depto["depto"]; ?></option>
-										                    <?php }?>
-                	                                    </select>
-								                    </div>
-							                    </div>
-							                    <div class="col">
-                                                    <div class="form-group">
-                                                        <label for="">municipio</label>
-                                                        <select name="muni" id="muni" class="form-control select2">
-                                                            <?php
-                                                                $mu = $con->consulta("SELECT * FROM municipios WHERE eliminado = 0");
-                                                                while ($muni = $con->arreglo($mu)) 
-                                                                {
-
-                                                            ?>
-                                                            <option value="<?php echo $muni["id_muni"]; ?>" <?php if ($dato["id_muni"] == $muni["id_muni"]) { echo "selected"; } ?> ><?php echo $muni["municipio"]; ?></option>
-										                    <?php }?>
-                                                        </select>
-                                                    </div>
-							                    </div>
+                                                
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label>Dirección</label>

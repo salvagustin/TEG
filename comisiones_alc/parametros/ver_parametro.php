@@ -38,7 +38,7 @@ $hora = date("H:i:s");
 
         {
 
-          $bu = $con->consulta("SELECT id_parametro FROM parametros WHERE id_depto = '$_SESSION[depto]' AND id_muni = '$_SESSION[muni]'");
+          $bu = $con->consulta("SELECT id_parametro FROM parametros ");
 
           if($con->conteo($bu) == 0)
 
@@ -70,7 +70,6 @@ $hora = date("H:i:s");
 
           <th>Logo</th>
 
-          <th>Municipalidad</th>
 
           <th>Alcalde</th>
 
@@ -90,11 +89,11 @@ $hora = date("H:i:s");
 
         <?php
 
-          if($_SESSION["rol"] == "Super")
+          if($_SESSION["rol"] == "Administrador")
 
           {
 
-            $sql = $con->consulta("SELECT municipios.municipio, departamentos.depto, parametros.id_parametro, parametros.municipalidad, parametros.telefono, parametros.direccion, parametros.logo, parametros.nombreAlcalde, parametros.cargoAlcalde FROM parametros INNER JOIN departamentos ON parametros.id_depto = departamentos.id_depto INNER JOIN municipios ON departamentos.id_depto = municipios.id_depto AND parametros.id_muni = municipios.id_muni WHERE parametros.eliminado = 0");
+            $sql = $con->consulta("SELECT  parametros.id_parametro, parametros.municipalidad, parametros.telefono, parametros.direccion, parametros.logo, parametros.nombreAlcalde, parametros.cargoAlcalde FROM parametros   WHERE parametros.eliminado = 0");
 
           }
 
@@ -102,7 +101,7 @@ $hora = date("H:i:s");
 
           {
 
-            $sql = $con->consulta("SELECT municipios.municipio, departamentos.depto, parametros.id_parametro, parametros.municipalidad, parametros.telefono, parametros.direccion, parametros.logo, parametros.nombreAlcalde, parametros.cargoAlcalde FROM parametros INNER JOIN departamentos ON parametros.id_depto = departamentos.id_depto INNER JOIN municipios ON departamentos.id_depto = municipios.id_depto AND parametros.id_muni = municipios.id_muni WHERE parametros.eliminado = 0 AND parametros.id_depto = '$_SESSION[depto]' AND parametros.id_muni = '$_SESSION[muni]'");
+            $sql = $con->consulta("SELECT parametros.id_parametro, parametros.municipalidad, parametros.telefono, parametros.direccion, parametros.logo, parametros.nombreAlcalde, parametros.cargoAlcalde FROM parametros  WHERE parametros.eliminado = 0");
 
           }
 
@@ -118,11 +117,10 @@ $hora = date("H:i:s");
 
           <td><img src="parametros/logos/<?php echo $ver["logo"];?>" whidth="53px" height="66px"></td>
 
-				  <td><?php echo $ver["municipalidad"]; ?> <?php echo $ver["municipio"];?></td>
+				  
 
           <td><?php echo $ver["nombreAlcalde"]; ?> <?php echo $ver["cargoAlcalde"]; ?></td>
 
-				  <td><?php echo $ver["depto"]; ?>, <?php echo $ver["municipio"]; ?></td>
 
           <td><?php echo $ver["telefono"]; ?></td>
 

@@ -60,32 +60,9 @@ $con = new cnn();
 
     </div>
 
-      <div class="col">
-                     <script> 
-     function showAlert(){
-    Swal.fire({
-        icon: 'success',
-        title: 'Hay afiliados activos, porfavor eliminarlos para poder subir',
-  confirmButtonText: `Aceptar`,
-
-}).then((result) => {
-         if (result.isConfirmed) {    window.opener.location.reload('afiliaciones.php');  window.close(); }
-        }) } 
-          
-               function showAlert2(){
-    Swal.fire({
-        icon: 'success',
-        title: 'No hay afiliados para mostrar',
-  confirmButtonText: `Aceptar`,
-
-}).then((result) => {
-         if (result.isConfirmed) {    window.opener.location.reload('afiliaciones.php');  window.close(); }
-        }) }
-          </script>
-          
-              
+      <div class="col">        
 <a href="afiliaciones/afiliacion.php" class="btn btn-primary " style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-plus"></i> Nuevo afiliado</a>
-<a onclick="showAlert()" class="btn btn-primary text-white" style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-file-import"></i> Importar</a>
+<a href="afiliaciones/subirAfiliados.php" class="btn btn-primary text-white" style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-file-import"></i> Importar</a>
 <a href="afiliados/descargarPadron.php" target="_blank" class="btn btn-primary text-white" style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-file-download" ></i> Reporte padrón electoral</a>
        
       </div>
@@ -105,7 +82,7 @@ $con = new cnn();
           <th>Nombre completo</th>
           <th>DUI</th>
           <th>Fecha de Nacimiento</th>
-          <th>Cargo</th>
+          <th>Plaza</th>
           <th>Estado</th>
           <th>Opciones</th>
         </tr>

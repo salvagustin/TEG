@@ -30,10 +30,6 @@ if (isset($_POST["boton"])) {
 
     $direc = $_POST['direc'];
 
-    $depa = $_POST['depa'];
-
-    $muni = $_POST['muni'];
-
     $correo = $_POST['correo'];
 
     $paginaW = $_POST['paginaW'];
@@ -72,13 +68,13 @@ if (isset($_POST["boton"])) {
 
     $cargo2 = $_POST['cargo2'];
 
-        $sql = $con->consulta("INSERT INTO parametros VALUES (NULL, '$depa', '$muni', '$municipalidad', '$nombreAlcalde', '$cargoAlcalde', '$nombreSecretario', '$cargoSecretario', '$telefono', '$direc', '$correo', '$paginaW', NULL, '$miembro1', '$miembro2', '$miembro3', '$cargo1', '$cargo2', '$cargo3', '$observador', '$observador2', '$observador3', '$cargoobservador', '$cargoobservador2', '$cargoobservador3', 'Activo', 0)");
+        $sql = $con->consulta("INSERT INTO parametros VALUES (NULL, '$municipalidad', '$nombreAlcalde', '$cargoAlcalde', '$nombreSecretario', '$cargoSecretario', '$telefono', '$direc', '$correo', '$paginaW', NULL, '$miembro1', '$miembro2', '$miembro3', '$cargo1', '$cargo2', '$cargo3', '$observador', '$observador2', '$observador3', '$cargoobservador', '$cargoobservador2', '$cargoobservador3', 'Activo', 0)");
 
         ///son img
 
     } else {
 
-        $sql = $con->consulta("INSERT INTO parametros VALUES (NULL, '$depa', '$muni', '$municipalidad', '$nombreAlcalde', '$cargoAlcalde', '$nombreSecretario', '$cargoSecretario', '$telefono', '$direc', '$correo', '$paginaW', '$logo', '$miembro1', '$miembro2', '$miembro3', '$cargo1', '$cargo2', '$cargo3', '$observador', '$observador2', '$observador3', '$cargoobservador', '$cargoobservador2', '$cargoobservador3', 'Activo', 0)");
+        $sql = $con->consulta("INSERT INTO parametros VALUES (NULL, '$municipalidad', '$nombreAlcalde', '$cargoAlcalde', '$nombreSecretario', '$cargoSecretario', '$telefono', '$direc', '$correo', '$paginaW', '$logo', '$miembro1', '$miembro2', '$miembro3', '$cargo1', '$cargo2', '$cargo3', '$observador', '$observador2', '$observador3', '$cargoobservador', '$cargoobservador2', '$cargoobservador3', 'Activo', 0)");
 
         move_uploaded_file($_FILES['logo']['tmp_name'], $ruta . $_FILES['logo']['name']);
 

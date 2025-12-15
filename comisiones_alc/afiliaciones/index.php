@@ -51,7 +51,9 @@ $hora = date("H:i:s");
   </script>
 </head>
 
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="
+    background-image: url('../plantilla/dist/img/background2.jpeg'); background-size: cover; background-repeat: no-repeat;    
+    background-position: center; min-height: 100vh;">
   <div class="login-box" style="margin-top: 30px;">
     
       <div class="login-box" style="border: 1px solid #131d2e;">
@@ -63,7 +65,7 @@ $hora = date("H:i:s");
         </div>
         <?php //} ?>
       <!-- /.login-logo -->
-      <div class="card">
+   
         <div class="card-body login-card-body">
           <div style="text-align: center; margin-bottom: 15px;">
             <h4 style="color:#004387;  font-weight: bold;">Cabina virtual de votación</h4>
@@ -156,7 +158,7 @@ $hora = date("H:i:s");
             </p>-->
 			  
           </div>
-        </div>
+        
       </div>
       </div>
     <script src="../plantilla/plugins/inputmask/min/jquery.inputmask.bundle.min.js"></script>

@@ -83,10 +83,7 @@ $hora = date("H:s:i");
                   
                 </div>
                           <div class="card-footer text-center">
-                <button type="submit" class="btn btn-primary" id="boton" name="boton">
-        <a> <i class="fas fa-undo"></i></a>
-            Regresar 
-                </button>
+                <a href="../afiliaciones.php" class="btn btn-primary"><i class="fas fa-redo"></i> Volver al inicio </a>
               </div>
                 <?php } ?>
     

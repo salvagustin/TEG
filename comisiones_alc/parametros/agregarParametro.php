@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 ini_set('default_charset', 'UTF8');
 
@@ -76,11 +76,7 @@ $fecha = date("Y-m-d");
 
 	<script>
 
-		function fileValidation() 
-
-
-
-		{
+		function fileValidation() {
 
 
 
@@ -96,15 +92,11 @@ $fecha = date("Y-m-d");
 
 
 
-			
 
 
 
-			if (!allowedExtensions.exec(filePath)) 
 
-
-
-			{
+			if (!allowedExtensions.exec(filePath)) {
 
 
 
@@ -148,7 +140,8 @@ $fecha = date("Y-m-d");
 
 
 
-			<form action="parametros/agregarDatos.php" method="post" enctype="multipart/form-data" id="form1" name="form1">
+			<form action="parametros/agregarDatos.php" method="post" enctype="multipart/form-data" id="form1"
+				name="form1">
 
 
 
@@ -188,7 +181,8 @@ $fecha = date("Y-m-d");
 
 
 
-									<input type="text" id="municipalidad" name="municipalidad" class="form-control" placeholder="Nombre de la alcaldía...">
+									<input type="text" id="municipalidad" name="municipalidad" class="form-control"
+										placeholder="Nombre de la alcaldía...">
 
 
 
@@ -212,7 +206,8 @@ $fecha = date("Y-m-d");
 
 
 
-									<input type="text" class="form-control" id="alcalde" name="alcalde" placeholder="Nombre del encargado de...">
+									<input type="text" class="form-control" id="alcalde" name="alcalde"
+										placeholder="Nombre del encargado de...">
 
 
 
@@ -236,7 +231,8 @@ $fecha = date("Y-m-d");
 
 
 
-									<input type="text" class="form-control" id="cargoAlcalde" name="cargoAlcalde" placeholder="Cargo...">
+									<input type="text" class="form-control" id="cargoAlcalde" name="cargoAlcalde"
+										placeholder="Cargo...">
 
 
 
@@ -268,7 +264,8 @@ $fecha = date("Y-m-d");
 
 
 
-									<input type="text" class="form-control" id="nombreSecretario" name="nombreSecretario" placeholder="Nombre del secretario...">
+									<input type="text" class="form-control" id="nombreSecretario"
+										name="nombreSecretario" placeholder="Nombre del secretario...">
 
 
 
@@ -292,7 +289,8 @@ $fecha = date("Y-m-d");
 
 
 
-									<input type="text" class="form-control" id="cargoSecretario" name="cargoSecretario" placeholder="Cargo del secretario...">
+									<input type="text" class="form-control" id="cargoSecretario" name="cargoSecretario"
+										placeholder="Cargo del secretario...">
 
 
 
@@ -316,7 +314,8 @@ $fecha = date("Y-m-d");
 
 
 
-									<input type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono...">
+									<input type="text" class="form-control" id="telefono" name="telefono"
+										placeholder="Teléfono...">
 
 
 
@@ -336,83 +335,7 @@ $fecha = date("Y-m-d");
 
 
 
-							<div class="col">
-
-
-
-								<div class="form-group">
-
-
-
-             			<label for="depto">Departamento</label>
-
-
-
-									<select name="depa" id="depa" class="form-control select2">
-
-
-
-										<?php
-
-
-
-											$de = $con->consulta("SELECT * FROM departamentos WHERE eliminado = 0");
-
-
-
-											while($depto = $con->arreglo($de)){ 
-
-
-
-										?>
-
-
-
-										<option value="<?php echo $depto["id_depto"]; ?>"><?php echo $depto["depto"];?></option>
-
-
-
-										<?php } ?>
-
-
-
-                	</select>
-
-
-
-								</div>
-
-
-
-							</div>
-
-
-
-							<div class="col">
-
-
-
-            		<div class="form-group">
-
-
-
-                	<label for="">Municipio</label>
-
-
-
-                	<select name="muni" id="muni" class="form-control select2">
-
-
-
-                	</select>
-
-
-
-              	</div> 
-
-
-
-							</div>
+							
 
 
 
@@ -428,7 +351,8 @@ $fecha = date("Y-m-d");
 
 
 
-									<input type="text" class="form-control" id="direc" name="direc" placeholder="Dirección...">
+									<input type="text" class="form-control" id="direc" name="direc"
+										placeholder="Dirección...">
 
 
 
@@ -460,7 +384,8 @@ $fecha = date("Y-m-d");
 
 
 
-									<input type="text" class="form-control" id="correo" name="correo" placeholder="Correo...">       
+									<input type="text" class="form-control" id="correo" name="correo"
+										placeholder="Correo...">
 
 
 
@@ -484,7 +409,8 @@ $fecha = date("Y-m-d");
 
 
 
-									<input type="text" class="form-control" id="paginaW" name="paginaW" placeholder="URL...">
+									<input type="text" class="form-control" id="paginaW" name="paginaW"
+										placeholder="URL...">
 
 
 
@@ -496,15 +422,16 @@ $fecha = date("Y-m-d");
 
 
 
-		        	<div class="col">
+							<div class="col">
 
 
 
-         				<div class="custom-file">
+								<div class="custom-file">
 
 
 
-									<input type="file" class="custom-file-input" id="logo" name="logo" onchange="return fileValidation()">
+									<input type="file" class="custom-file-input" id="logo" name="logo"
+										onchange="return fileValidation()">
 
 
 
@@ -512,11 +439,11 @@ $fecha = date("Y-m-d");
 
 
 
-              	</div>                
+								</div>
 
 
 
-            	</div>
+							</div>
 
 
 
@@ -524,81 +451,83 @@ $fecha = date("Y-m-d");
 
 						<div class="row">
 
-					<div class="col text-center">
+							<div class="col text-center">
 
-				 <div class="form-group">
+								<div class="form-group">
 
-          <label>Miembro de la comisión transitoria de elección</label>
-
-
-
-                <input type="text" class="form-control" id="miembro1" name="miembro1" >
-
-                <input type="text" class="form-control" id="miembro2" name="miembro2">
-
-                <input type="text" class="form-control" id="miembro3" name="miembro3" >
-
-	                     </div>
-
-	                    	</div> 
-
-				         <div class="col text-center">
-
-				        	<div class="form-group">
-
-			    			 <label>Cargos </label>
-
-			    		
-
-             <input type="text" class="form-control" id="cargo1" name="cargo1" >
-
-             <input type="text" class="form-control" id="cargo2" name="cargo2" >
-
-            <input type="text" class="form-control" id="cargo3" name="cargo3" >
-
-			            		</div>
-
-		            		</div> 
-
-                            </div>
-
- <div class="row">
-
- <div class="col text-center">
+									<label>Miembro de la comisión transitoria de elección</label>
 
 
 
-<div class="form-group">
+									<input type="text" class="form-control" id="miembro1" name="miembro1">
+
+									<input type="text" class="form-control" id="miembro2" name="miembro2">
+
+									<input type="text" class="form-control" id="miembro3" name="miembro3">
+
+								</div>
+
+							</div>
+
+							<div class="col text-center">
+
+								<div class="form-group">
+
+									<label>Cargos </label>
 
 
 
-<label>Nombre de los observadores</label>
+									<input type="text" class="form-control" id="cargo1" name="cargo1">
+
+									<input type="text" class="form-control" id="cargo2" name="cargo2">
+
+									<input type="text" class="form-control" id="cargo3" name="cargo3">
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="row">
+
+							<div class="col text-center">
 
 
 
-<input type="text" class="form-control" id="observador" name="observador" >
-<input type="text" class="form-control" id="observador2" name="observador2" >
-<input type="text" class="form-control" id="observador3" name="observador3" >
+								<div class="form-group">
 
-	 </div>
 
-		</div> 
 
-				 <div class="col text-center">
+									<label>Nombre de los observadores</label>
 
-					<div class="form-group">
 
-						 <label>Cargo de los observadores </label>
 
-						 <input type="text" class="form-control" name="cargoobservador" id="cargoobservador">
-                        <input type="text" class="form-control" name="cargoobservador2" id="cargoobservador2">
-                        <input type="text" class="form-control" name="cargoobservador3" id="cargoobservador3">
+									<input type="text" class="form-control" id="observador" name="observador">
+									<input type="text" class="form-control" id="observador2" name="observador2">
+									<input type="text" class="form-control" id="observador3" name="observador3">
 
-					</div>
+								</div>
 
-				</div> 
+							</div>
 
-		</div>
+							<div class="col text-center">
+
+								<div class="form-group">
+
+									<label>Cargo de los observadores </label>
+
+									<input type="text" class="form-control" name="cargoobservador" id="cargoobservador">
+									<input type="text" class="form-control" name="cargoobservador2"
+										id="cargoobservador2">
+									<input type="text" class="form-control" name="cargoobservador3"
+										id="cargoobservador3">
+
+								</div>
+
+							</div>
+
+						</div>
 
 					</div>
 
@@ -606,7 +535,8 @@ $fecha = date("Y-m-d");
 
 
 
-						<button type="submit" class="btn btn-primary" id="boton" name="boton"><i class="far fa-save"></i> Guardar datos</button>
+						<button type="submit" class="btn btn-primary" id="boton" name="boton"><i
+								class="far fa-save"></i> Guardar datos</button>
 
 
 
@@ -690,11 +620,7 @@ $fecha = date("Y-m-d");
 
 
 
-		$(function() 
-
-
-
-		{
+		$(function () {
 
 
 
@@ -702,27 +628,27 @@ $fecha = date("Y-m-d");
 
 
 
-			({
+				({
 
 
 
-				toast: true,
+					toast: true,
 
 
 
-				position: 'top-end',
+					position: 'top-end',
 
 
 
-				showConfirmButton: false,
+					showConfirmButton: false,
 
 
 
-				timer: 3000
+					timer: 3000
 
 
 
-			});  
+				});
 
 
 
@@ -734,11 +660,7 @@ $fecha = date("Y-m-d");
 
 
 
-		$(document).ready(function()
-
-
-
-    {
+		$(document).ready(function () {
 
 
 
@@ -746,23 +668,19 @@ $fecha = date("Y-m-d");
 
 
 
-		  recargardeptoExpe();
+			recargardeptoExpe();
 
 
 
-		  $('#depa').change(function()
+			$('#depa').change(function () {
 
 
 
-      {
+				recargardeptoExpe();
 
 
 
-			  recargardeptoExpe();
-
-
-
-		  });
+			});
 
 
 
@@ -770,39 +688,31 @@ $fecha = date("Y-m-d");
 
 
 
-		
 
 
 
-	  function recargardeptoExpe()
+
+		function recargardeptoExpe() {
 
 
 
-    {
+			$.ajax({
 
 
 
-		  $.ajax({
+				type: "POST",
 
 
 
-				type:"POST",
+				url: "parametros/deptoExpe.php",
 
 
 
-				url:"parametros/deptoExpe.php",
+				data: "continente=" + $('#depa').val(),
 
 
 
-				data:"continente=" + $('#depa').val(),
-
-
-
-				success:function(r)
-
-
-
-      	{
+				success: function (r) {
 
 
 
@@ -814,103 +724,87 @@ $fecha = date("Y-m-d");
 
 
 
-	  	});
+			});
 
 
 
-	  }
+		}
 
 
 
-	  $(document).ready(function()
+		$(document).ready(function () {
 
 
 
-    {
+			$('#depto').val(0);
 
 
 
-		  $('#depto').val(0);
+			recargardepto();
 
 
 
-		  recargardepto();
+			$('#depto').change(function () {
 
 
 
-		  $('#depto').change(function()
+				recargardepto();
 
 
 
-      {
+			});
 
 
 
-			  recargardepto();
+		})
 
 
 
-		  });
 
 
 
-	  })
 
+		function recargardepto() {
 
 
 
+			$.ajax({
 
 
 
-	  function recargardepto()
+				type: "POST",
 
 
 
-    {
+				url: "parametros/muni.php",
 
 
 
-		  $.ajax({
+				data: "continente=" + $('#depto').val(),
 
 
 
-			type:"POST",
+				success: function (r) {
 
 
 
-			url:"parametros/muni.php",
+					$('#muni').html(r);
 
 
 
-			data:"continente=" + $('#depto').val(),
+				}
 
 
 
-			success:function(r)
+			});
 
 
 
-      {
+		}
 
 
 
-			  $('#muni').html(r);
-
-
-
-			}
-
-
-
-	  	});
-
-
-
-	  }
-
-
-
-  </script>
+	</script>
 
 
 

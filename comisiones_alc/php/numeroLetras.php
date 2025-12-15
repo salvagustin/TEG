@@ -162,7 +162,7 @@ class EnLetras
     {
         $Rtn = '';
         $t = '';
-        $i = '';
+        $i = 0;
         do {
             switch ($x) {
                 case 0:$t = "Cero";
