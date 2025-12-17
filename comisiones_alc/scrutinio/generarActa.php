@@ -97,20 +97,20 @@ $asis3 = substr($totalVotos, 2, 1);
   <link rel="stylesheet" href="../plantilla/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Toastr -->
   <link rel="stylesheet" href="../plantilla/plugins/toastr/toastr.min.css">
-  <link href="plantilla/dist/img/LogoESA.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
+  <link href="../plantilla/dist/img/LogoESA.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
 </head>
 
 <body onload="window.print()">
   <div class="row">
     <div class="col-2 text-center">
-      <img src="../plantilla/dist/img/LogoAzul.png" width="81" height="91">
+      <img src="../plantilla/dist/img/ACEAzul.png" width="100%" height="100%">
     </div>
     <div class="col text-center">
       <h1>ACTA DE CIERRE Y ESCRUTINIO</h1>
         <h4>ELECCIÓN DE LOS INTEGRANTES PROPIETARIO Y SUPLENTE DE LA COMISIÓN DE ÉTICA GUBERNAMENTAL, POR PARTE DE LOS EMPLEADOS Y EMPLEADAS DE LA  AGENCIA DE CIBERSEGURIDAD DEL ESTADO</h4>
     </div>
     <div class="col-2 text-center">
-      <img src="../plantilla/dist/img/ACEAzul.png" width="81" height="91">
+      <img src="../plantilla/dist/img/ACEAzul.png" width="100%" height="100%">
     </div>
   </div>
   <div class="row" style="border: 1px solid #007bff;">
@@ -137,11 +137,11 @@ $asis3 = substr($totalVotos, 2, 1);
         </thead>
         <tr>
           <th>Nombre</th>
-          <th class="text-center">Cargo</th>
+          <th class="text-center">Plaza</th>
           <th colspan="3" class="text-center">Cifra en números</th>
           <th colspan="3" class="text-center">Cifra en letras</th>
           <tbody>
-            <?php $da = $con->consulta("SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada, candidatos.id_candidato FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_jornada = '$id' ");
+            <?php $da = $con->consulta("SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada, candidatos.id_candidato, afiliados.cargo FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_jornada = '$id' ");
             while ($dato = $con->arreglo($da)) {
               $vo = $con->consulta("SELECT SUM(voto) AS votos FROM votacion WHERE id_jornada = '$id' AND id_candidato = '$dato[id_candidato]' AND votacion.voto = 1 ");
               $votos = $con->arreglo($vo);
@@ -153,6 +153,7 @@ $asis3 = substr($totalVotos, 2, 1);
             ?>
               <tr>
                 <td style="border: 1px solid #007bff;"><?php echo $dato["primerNombre"]; ?> <?php echo $dato["segundoNombre"]; ?> <?php echo $dato["primerApellido"]; ?> <?php echo $dato["segundoApellido"]; ?> <?php echo $dato["apellidoCasada"]; ?></td>
+                <td align="center" style="border: 1px solid #007bff;"><?php echo $dato["cargo"]; ?></td>
                 <td align="center" style="border: 1px solid #007bff;"><?php echo $votCan1; ?></td>
                 <td align="center" style="border: 1px solid #007bff;"><?php echo $votCan2; ?></td>
                 <td align="center" style="border: 1px solid #007bff;"><?php echo $votCan3; ?></td>
@@ -179,7 +180,7 @@ $asis3 = substr($totalVotos, 2, 1);
               <td align="center" class="text-center" style="border: 1px solid #007bff;"><?php echo strtoupper(trim($V->ValorEnLetras($votAbs3, ''))); ?></td>  
             <tr>
               <?php
-              //$totalOtros = $abstenciones["abstenciones"] + $nulos["nulos"];
+              
 			  $totalOtros = $abstenciones["abstenciones"] ;
               $totaVotros = str_pad($totalOtros, 3, "0", STR_PAD_LEFT);
               $votOtros1 = substr($totaVotros, 0, 1);
@@ -205,92 +206,9 @@ $asis3 = substr($totalVotos, 2, 1);
               <td align="center" class="text-center" style="border: 1px solid #007bff;"><?php echo strtoupper(trim($V->ValorEnLetras($votCann2, ''))); ?></td>
               <td align="center" class="text-center" style="border: 1px solid #007bff;"><?php echo strtoupper(trim($V->ValorEnLetras($votCann3, ''))); ?></td>
             </tr>
-            <!--<tr>
-              <th align="left" scope="row">OTROS VOTOS</th>
-              <td>&nbsp;</td>
-              <td align="center">&nbsp;</td>
-              <td align="center">&nbsp;</td>
-              <td align="center">&nbsp;</td>
-              <td align="center" class="text-center">&nbsp;</td>
-              <td align="center" class="text-center">&nbsp;</td>
-              <td align="center" class="text-center">&nbsp;</td>
-            </tr>-->
+            </tr>
             
-            
-              <!-- <td colspan="2" style="border: 1px solid #007bff;">TOTAL DE OTROS VOTOS</td> -->
-              <!--<td class="text-center" style="border: 1px solid #007bff;"><?php echo $votOtros1; ?></td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php echo $votOtros2; ?></td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php echo $votOtros3; ?></td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php echo strtoupper(trim($V->ValorEnLetras($votOtros1, ''))); ?></td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php echo strtoupper(trim($V->ValorEnLetras($votOtros2, ''))); ?></td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php echo strtoupper(trim($V->ValorEnLetras($votOtros3, ''))); ?></td> -->
-            </tr>
-            <tr>
-              <th align="left" scope="row"></th>
-              <td>&nbsp;</td>
-              <td align="center">&nbsp;</td>
-              <td align="center">&nbsp;</td>
-              <td align="center">&nbsp;</td>
-              <td align="center" class="text-center">&nbsp;</td>
-              <td align="center" class="text-center">&nbsp;</td>
-              <td align="center" class="text-center">&nbsp;</td>
-            </tr>
-<!--            <tr>
-              <td colspan="2" style="border: 1px solid #007bff;">TOTAL DE PAPELETAS ENTREGADAS A VOTANTES</td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php echo $asis1; ?></td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php echo $asis2; ?></td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php echo $asis3; ?></td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php echo strtoupper(trim($V->ValorEnLetras($asis1, ''))); ?></td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php echo strtoupper(trim($V->ValorEnLetras($asis2, ''))); ?></td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php echo strtoupper(trim($V->ValorEnLetras($asis3, ''))); ?></td>
-            </tr>-->
-            <!-- <tr>
-              <td colspan="2" style="border: 1px solid #007bff;">VOTOS INUTILIZADAS</td>
-              <td class="text-center" style="border: 1px solid #007bff;">0</td>
-              <td class="text-center" style="border: 1px solid #007bff;">0</td>
-              <td class="text-center" style="border: 1px solid #007bff;">0</td>
-              <td class="text-center" style="border: 1px solid #007bff;">CERO</td>
-              <td class="text-center" style="border: 1px solid #007bff;">CERO</td>
-              <td class="text-center" style="border: 1px solid #007bff;">CERO</td>
-            </tr>
-            <tr>
-              <td colspan="2" style="border: 1px solid #007bff;">VOTOS NO UTILIZADAS</td>
-              <td class="text-center" style="border: 1px solid #007bff;">0</td>
-              <td class="text-center" style="border: 1px solid #007bff;">0</td>
-              <td class="text-center" style="border: 1px solid #007bff;">0</td>
-              <td class="text-center" style="border: 1px solid #007bff;">CERO</td>
-              <td class="text-center" style="border: 1px solid #007bff;">CERO</td>
-              <td class="text-center" style="border: 1px solid #007bff;">CERO</td>
-            </tr> -->
-            <tr>
-              <th align="left" scope="row"></th>
-              <td>&nbsp;</td>
-              <td align="center">&nbsp;</td>
-              <td align="center">&nbsp;</td>
-              <td align="center">&nbsp;</td>
-              <td align="center" class="text-center">&nbsp;</td>
-              <td align="center" class="text-center">&nbsp;</td>
-              <td align="center" class="text-center">&nbsp;</td>
-            </tr>
-            <!--            <tr>
-              <td colspan="2" style="border: 1px solid #007bff;">TOTAL DE PAPELETAS RECIBIDAS POR LA JRV</td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php /*echo $asis1; ?></td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php echo $asis2; ?></td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php echo $asis3; ?></td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php echo strtoupper(trim($V->ValorEnLetras($asis1, ''))); ?></td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php echo strtoupper(trim($V->ValorEnLetras($asis2, ''))); ?></td>
-              <td class="text-center" style="border: 1px solid #007bff;"><?php echo strtoupper(trim($V->ValorEnLetras($asis3, '')));*/ ?></td>
-            </tr>-->
-            <tr>
-              <th align="left" scope="row">&nbsp;</th>
-              <td>&nbsp;</td>
-              <td align="center">&nbsp;</td>
-              <td align="center">&nbsp;</td>
-              <td align="center">&nbsp;</td>
-              <td align="center" class="text-center">&nbsp;</td>
-              <td align="center" class="text-center">&nbsp;</td>
-              <td align="center" class="text-center">&nbsp;</td>
-            </tr>
+          
             <tr>
               <th colspan="2" style="border: 1px solid #007bff;">TOTAL DE VOTANTES REGISTRADOS EN EL SISTEMA<br>(Según datos estadisticos del sistema)</th>
               <td valign="middle" class="text-center" style="border: 1px solid #007bff;"><?php echo $asis1; ?></td>
@@ -339,27 +257,38 @@ $asis3 = substr($totalVotos, 2, 1);
                 <p>&nbsp;</p>
               </td>
             </tr>
-            <tr>
-              <td scope="row">
-                <br><br><br>
-                <p><?php echo $parametro["miembro1"]; ?></p>
-                 <p style="margin:-2.5% 0;"> <?php echo $parametro["cargo1"]; ?></p>
-              </td>
-              <td colspan="3" align="center">
-                <p><?php echo $parametro["miembro2"]; ?></p>
-                <p style="margin:-2.5% 0;"> <?php echo $parametro["cargo2"]; ?></p>
-              </td>
-              <td align="center">
-                <p>&nbsp;</p>
-              </td>
-              <td colspan="3" align="center" class="text-center">
-                <br><br><br>
-                <p><?php echo $parametro["miembro3"]; ?></p>
-                <p style="margin:-2.5% 0;"><?php echo $parametro["cargo3"]; ?></p>
-              </td>
-            </tr>
-          </tbody>
+            </tbody>
       </table>
+      <div class="row">
+    <div class="col table-responsive">
+        <table class="table table-sm table-borderless" style="width: 100%; margin-top: 50px;">
+            <tbody>
+                <tr>
+                    <td class="text-center" style="width: 33.3%;">
+                        <div style="width: 60%; border-top: 1px solid black; padding-top: 5px; margin: 0 auto;">
+                            <p style="margin-bottom: 0; font-weight: bold;"><?php echo $parametro["miembro1"]; ?></p>
+                        </div>
+                        <p style="margin-top: 0; font-size: 0.9em;"><?php echo $parametro["cargo1"]; ?></p>
+                    </td>
+
+                    <td class="text-center" style="width: 33.3%;">
+                         <div style="width: 60%; border-top: 1px solid black; padding-top: 5px; margin: 0 auto;">
+                            <p style="margin-bottom: 0; font-weight: bold;"><?php echo $parametro["miembro2"]; ?></p>
+                        </div>
+                        <p style="margin-top: 0; font-size: 0.9em;"><?php echo $parametro["cargo2"]; ?></p>
+                    </td>
+
+                    <td class="text-center" style="width: 33.3%;">
+                         <div style="width: 60%; border-top: 1px solid black; padding-top: 5px; margin: 0 auto;">
+                            <p style="margin-bottom: 0; font-weight: bold;"><?php echo $parametro["miembro3"]; ?></p>
+                        </div>
+                        <p style="margin-top: 0; font-size: 0.9em;"><?php echo $parametro["cargo3"]; ?></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
     </div>
   </div>
 </body>

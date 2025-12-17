@@ -47,57 +47,6 @@ function agregaform(datos) {
 
 
 
-function actualizaDatos() {
-
-
-    id = $('#idU').val();
-    descripcion = $('#descripcionU').val();
-    fecha = $('#fechaU').val();
-    desde = $('#desdeU').val();
-    hasta = $('#hastaU').val();
-    Jdesde = $('#JdesdeU').val();
-    Jhasta = $('#JhastaU').val();
-    estado = $('#estadoU').val();
-
-
-    cadena = "id=" + id +
-        "&descripcion=" + descripcion +
-        "&fecha=" + fecha +
-        "&desde=" + desde +
-        "&hasta=" + hasta +
-        "&Jdesde=" + Jdesde +
-        "&Jhasta=" + Jhasta +
-        "&estado=" + estado;
-
-
-
-    $.ajax({
-        type: "POST",
-        url: "jornadas/actualizaDatos.php",
-        data: cadena,
-        success: function(r) {
-
-
-            if (r == 1) {
-
-                $('#tabla').load('jornadas/ver_jornadas.php');
-                Swal.fire(
-                    'Exito!',
-                    'Datos Guardado con Exito!',
-                    'success'
-                )
-            } else {
-                Swal.fire(
-                    'Error!',
-                    'No se pudieron guardar los datos!',
-                    'error'
-                )
-            }
-        }
-    });
-
-}
-
 
 
 function preguntarSiNo(id) {

@@ -31,6 +31,7 @@ $para = $con->consulta( "SELECT parametros.municipalidad, parametros.nombreAlcal
 
 $parametro = $con->arreglo( $para );
 
+
 $newDate = date( "d-m-Y", strtotime( $jornada[ "fecha" ] ) );
 $fechaEleccion = strftime( "%B", strtotime( $newDate ) );
 
@@ -110,12 +111,12 @@ $totalGolbal = $con->arreglo( $toV );
 </head>
 <body onload="window.print()">
 <div class="row">
-  <div class="col-2 text-center"> <img src="../parametros/logos/<?php echo $parametro["logo"]; ?>" width="81" height="91"> </div>
+  <div class="col-2 text-center"> <img src="../plantilla/dist/img/ACEAzul.png" width="100%" height="100%"> </div>
   <div class="col text-center">
     <h1>AGENCIA DE CIBERSEGURIDAD DEL ESTADO</h1>
     <h2>ACTA DE ESCRUTINIO FINAL DE ELECCIÓN DE MIEMBROS PROPIETARIO Y SUPLENTE EN REPRESENTACIÓN DE LOS SERVIDORES PUBLICOS, ANTE LA COMISIÓN DE ÉTICA GUBERNAMENTAL.</h2>
   </div>
-  <div class="col-2 text-center"> <img src="../plantilla/dist/img/Escudo.fw.png" width="81" height="91"> </div>
+  <div class="col-2 text-center"> <img src="../plantilla/dist/img/ACEAzul.png" width="100%" height="100%"> </div>
 </div>
 <div class="row">
   <div class="col">

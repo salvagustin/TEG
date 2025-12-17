@@ -76,5 +76,11 @@ return $this->total_consultas;
 
 }
 
+
+public function getConexion() {
+    return $this->conexion;
+}
+
+
 }
 

@@ -47,7 +47,7 @@ $con = new cnn();
                 <li class="breadcrumb-item active">Escrutinio</li>
               </ol>
             </div>
-            <div id="tabla"></div>
+            <div id="tabla" style="width:100%"></div>
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
       </div>

@@ -31,23 +31,23 @@ $hora = date("H:s:i");
         $segundoNombre      = mb_strtoupper($_POST["segundoNombre"]);
         $primerApellido     = mb_strtoupper($_POST["primerApellido"]);
         $segundoApellido    = mb_strtoupper($_POST["segundoApellido"]);
-        $apellidoCasada     = mb_strtoupper($_POST["apellidoCasada"]);
-        $sexo               = mb_strtoupper($_POST["sexo"]);
         $dui                = $_POST["dui"];
         $fechaNac           = $_POST["fechaNac"];
         $cargo              = mb_strtoupper($_POST["cargo"]);
+        $correo             = mb_strtoupper($_POST["correo"]);
         $codigo             = mb_strtoupper(substr(md5(time()), 0, 6));
+        
 
        
 
         $bus = $con->consulta("SELECT id FROM afiliados WHERE dui = '$dui'");
         $bus=$con->conteo($bus);
   
-        if($bus==0)
+        if($bus==0) 
         {
         // Código CORREGIDO (23 valores, especificando las 23 columnas de la tabla visible)
-        $insert = $con->consulta("INSERT INTO afiliados (id, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, sexo, dui, fechaNac, cargo,  codigo, eliminado) 
-                                            VALUES(NULL,'$primerNombre', '$segundoNombre', '$primerApellido', '$segundoApellido', '$apellidoCasada', '$sexo', '$dui', '$fechaNac',  '$cargo',  '$codigo',  0)");  
+        $insert = $con->consulta("INSERT INTO afiliados (id, primerNombre, segundoNombre, primerApellido, segundoApellido,  dui, fechaNac, cargo, correo,  codigo, eliminado) 
+                                            VALUES(NULL,'$primerNombre', '$segundoNombre', '$primerApellido', '$segundoApellido', '$dui', '$fechaNac',  '$cargo',  '$correo',  '$codigo',  0)");  
         }
       }
     ?>

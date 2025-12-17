@@ -64,24 +64,7 @@ $hora = date("H:s:i");
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-8">
-                        <div class="form-group">
-                          <label for="apellidoCasada">Apellido de casada</label>
-                          <input type="text" name="apellidoCasada" id="apellidoCasada" class="form-control text-uppercase">
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-group">
-                          <label for="sexo">Sexo</label>
-                          <select class="custom-select" id="sexo" name="sexo" required>
-                            <option value=""></option>
-                            <option value="FEMENINO">FEMENINO</option>
-                            <option value="MASCULINO">MASCULINO</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
+                    
                     <hr class="bg-primary">
                     <div class="row">
                       <div class="col">
@@ -116,6 +99,13 @@ $hora = date("H:s:i");
                         <input type="text" name="cargo" id="cargo" class="form-control">
                       </div>
                     </div>
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" name="correo" id="correo" class="form-control" >
+                      </div>
+                    </div>
+
                   </div>
                   
                 </div>

@@ -60,7 +60,7 @@ $con = new cnn();
                                 <li class="breadcrumb-item active">Jornadas</li>
                             </ol>
                         </div><!-- /.col -->
-                        <div id="tabla"></div>
+                        <div id="tabla" style="width:100%"></div>
                     </div><!-- /.row -->
                 </div><!-- /.container-fluid -->
             </div>

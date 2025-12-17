@@ -134,12 +134,7 @@ function validar()
                               </select>
                             </div>
                           </div>
-                          <div class="col-2">
-                            <div class="form-group">
-                              <label for="">Edad</label>
-                                <input type="text" class="form-control" id="edad" name="edad" placeholder="edad" required>
-                            </div>
-                          </div>
+                          
                           <div class="col-3">
                             <div class="form-group">
                               <label for="">Jornada electoral *</label>

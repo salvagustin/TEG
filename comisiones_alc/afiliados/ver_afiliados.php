@@ -2,11 +2,7 @@
 ini_set('default_charset', 'UTF8');
 require("../php/conexion.php");
 require "../seguro.php";
-
-
-
 $con = new cnn();
-
 ?>
 <script>
   $(document).ready(function(){
@@ -51,33 +47,22 @@ $con = new cnn();
   });
 </script>
 <div class="card" >
-
   <div class="card-header">
-
     <div class="row">
-
       <div class="col"><h3 class="card-title">Afiliados en el padrón</h3>
-
     </div>
-
       <div class="col">        
 <a href="afiliaciones/afiliacion.php" class="btn btn-primary " style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-plus"></i> Nuevo afiliado</a>
 <a href="afiliaciones/subirAfiliados.php" class="btn btn-primary text-white" style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-file-import"></i> Importar</a>
-<a href="afiliados/descargarPadron.php" target="_blank" class="btn btn-primary text-white" style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-file-download" ></i> Reporte padrón electoral</a>
-       
+<a href="afiliados/descargarPadron.php" target="_blank" class="btn btn-primary text-white" style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-file-download" ></i> Reporte</a>
+<a href="" target="_blank" class="btn btn-primary text-white" style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-share" ></i> Enviar</a>      
       </div>
   </div>
-
   <!-- /.card-header -->
-
   <div class="card-body">
-
     <table id="jornadas" class="table table-bordered table-striped">
-
       <thead>
-
         <tr>
-
           <th>#</th>
           <th>Nombre completo</th>
           <th>DUI</th>
@@ -86,30 +71,11 @@ $con = new cnn();
           <th>Estado</th>
           <th>Opciones</th>
         </tr>
-
       </thead>
-
       <tbody>
-
         <?php
 
-        if($_SESSION["rol"] == "Administrador")
-
-        {
-
-          $sql = $con->consulta("SELECT afiliados.id,  afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada, afiliados.dui, afiliados.cargo,   afiliados.fechaNac, afiliados.eliminado FROM afiliados ");
-
-        }
-
-        else
-
-        {
-
-          $sql = $con->consulta("SELECT afiliados.id,  afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada, afiliados.dui, afiliados.cargo, afiliados.fechaNac, afiliados.eliminado FROM afiliados ");
-
-        }
-
-        
+          $sql = $con->consulta("SELECT afiliados.id,  afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido,  afiliados.dui, afiliados.cargo,   afiliados.fechaNac, afiliados.eliminado FROM afiliados ");
 
         while ($ver = $con->arreglo($sql)) {
 
@@ -118,24 +84,25 @@ $con = new cnn();
           <tr>
 
             <td><?php echo $ver["id"]; ?></td>
-
-            <td><?php echo $ver["primerNombre"]; ?> <?php echo $ver["segundoNombre"]; ?> <?php echo $ver["primerApellido"]; ?> <?php echo $ver["segundoApellido"]; ?> <?php echo $ver["apellidoCasada"]; ?></td>
-
+            <td><?php echo $ver["primerNombre"]; ?> <?php echo $ver["segundoNombre"]; ?> <?php echo $ver["primerApellido"]; ?> <?php echo $ver["segundoApellido"]; ?></td>
             <td><?php echo $ver["dui"]; ?></td>
-
             <td><?php echo $ver["fechaNac"]; ?></td>
-
             <td><?php echo $ver["cargo"]; ?></td>
-
             <td><?php echo ($ver["eliminado"] == 0) ? "Activo" : "Inactivo"; ?></td>
-            
+          
             
             <?php 
               if ($ver["eliminado"] == 0) { 
               ?>
                   <td>
                     <a onclick="confirmar(event)" href="<?php echo "javascript:editar('afiliados/nuevoCodigo.php?id=$ver[id]',600,362)"; ?>" class="btn btn-secondary" title="Restablecer Codigo"><i class="fas fa-sync"></i></a>
+                
                     <button class="btn btn-warning" onclick="preguntarSiNo('<?php echo $ver['id']; ?>')" title="Inactivar Afiliado"><i class="fas fa-user-times"></i></button>
+                  
+                    <a href="afiliaciones/ActualizacionDatos.php?id=<?php echo base64_encode($ver['id']); ?>" 
+                      class="btn btn-info" title="Editar Afiliado">
+                      <i class="fa fa-pen"></i>
+                    </a>
                   </td>
               <?php 
               } else { 
@@ -150,13 +117,9 @@ $con = new cnn();
             
 
           </tr>
-
         <?php } ?>
-
       </tbody>
-
     </table>
-
   </div>
 
   <!-- /.card-body -->

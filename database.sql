@@ -54,9 +54,11 @@ CREATE TABLE `adm_usuarios`  (
 
 -- ----------------------------
 -- Records of adm_usuarios
--- SuperUser---V0tac10N3s$2025
+-- SuperUser--- Sup3rV0t4c10n3s
+-- Us3rV0taciones  ----- V0tac10N3s$2025
 -- ----------------------------
-INSERT INTO `adm_usuarios` VALUES (1, 'admin', '202cb962ac59075b964b07152d234b70', 2, 'adminis', 'trador', '12345678', 'admin@admin.com', 'Activo');
+INSERT INTO `adm_usuarios` VALUES (3, 'Sup3rU53r', 'a3e0459970170984ae87486e93331453', 1, 'Super', 'User', '12345678', 'edgardo.flores@ace.gob.sv', 'Activo'); 
+INSERT INTO `adm_usuarios` VALUES (2, 'Us3rV0taciones', '4e07d08c050fb3c8babec8df1ae5c465', 2, 'User', 'administrador', '12345678', 'edgardo.flores@ace.gob.sv', 'Activo');
 
 
 -- ----------------------------
@@ -69,15 +71,32 @@ CREATE TABLE `afiliados`  (
   `segundoNombre` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `primerApellido` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `segundoApellido` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `apellidoCasada` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `sexo` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `dui` varchar(15) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `fechaNac` date NULL DEFAULT NULL,
   `cargo` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `correo` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `codigo` varchar(6) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `eliminado` varchar(5) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 2624 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for jornadas
+-- ----------------------------
+DROP TABLE IF EXISTS `jornadas`;
+CREATE TABLE `jornadas`  (
+  `id_jornada` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `fecha` date NULL DEFAULT NULL,
+  `horaDesde` time(0) NULL DEFAULT NULL,
+  `horaHasta` time(0) NULL DEFAULT NULL,
+  `periodoDesde` date NULL DEFAULT NULL,
+  `periodoHasta` date NULL DEFAULT NULL,
+  `estado` varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `eliminado` varchar(5) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id_jornada`) USING BTREE
+  ) ENGINE = InnoDB AUTO_INCREMENT = 68 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
 
 
 -- ----------------------------
@@ -120,22 +139,6 @@ CREATE TABLE `historial`  (
   CONSTRAINT `historial_ibfk_1` FOREIGN KEY (`usu`) REFERENCES `adm_usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE = InnoDB AUTO_INCREMENT = 2321 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
--- ----------------------------
--- Table structure for jornadas
--- ----------------------------
-DROP TABLE IF EXISTS `jornadas`;
-CREATE TABLE `jornadas`  (
-  `id_jornada` int(11) NOT NULL AUTO_INCREMENT,
-  `descripcion` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `fecha` date NULL DEFAULT NULL,
-  `horaDesde` time(0) NULL DEFAULT NULL,
-  `horaHasta` time(0) NULL DEFAULT NULL,
-  `periodoDesde` date NULL DEFAULT NULL,
-  `periodoHasta` date NULL DEFAULT NULL,
-  `estado` varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `eliminado` varchar(5) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id_jornada`) USING BTREE
-  ) ENGINE = InnoDB AUTO_INCREMENT = 68 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 
 -- ----------------------------

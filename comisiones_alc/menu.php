@@ -40,6 +40,12 @@
                     <p>Escrutinio</p>
                 </a>
             </li>
+            <li class="nav-item">
+                        <a href="parametros.php" class="nav-link">
+                            <i class="fas fa-cogs nav-icon"></i>
+                            <p>Parámetros</p>
+                        </a>
+                    </li>
             <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-clipboard-list"></i>
@@ -55,14 +61,11 @@
                             <p>Reporte de las jornadas</p>
                         </a>
                     </li>
+                    
 
                 </ul>
             </li>
             
-        <?php
-            break;
-        case "Super":
-        ?>
             <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-tools"></i>
@@ -84,15 +87,16 @@
                             <p>Admin roles</p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="parametros.php" class="nav-link">
-                            <i class="fas fa-cogs nav-icon"></i>
-                            <p>Parámetros</p>
-                        </a>
-                    </li>
+                    
 
                 </ul>
             </li>
+
+        <?php
+            break;
+        case "Super":
+        ?>
+            
             
     <?php
             break;

@@ -20,7 +20,7 @@ class EnLetras
             $Signo = "";
         }
 
-        if (intval(number_format($x, 2, '.', '')) != $x) //<- averiguar si tiene decimales
+        if (intval(number_format($x, 2, '.', '')) != $x) 
         {
             $s = number_format($x, 2, '.', '');
         } else {

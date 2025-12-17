@@ -11,7 +11,7 @@ function agregardatos(usu, pass, rol, nom, ape, tel, mail1, mail2,deptoExpe, mun
 			if(r==1){
 				
 				
-$('#tabla').load('usuarios.php');
+//$('#tabla').load('usuarios.php');
 
     Swal.fire(
 
