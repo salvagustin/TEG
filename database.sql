@@ -54,7 +54,7 @@ CREATE TABLE `adm_usuarios`  (
 
 -- ----------------------------
 -- Records of adm_usuarios
--- SuperUser--- Sup3rV0t4c10n3s
+-- Sup3rU53r--- Sup3rV0t4c10n3s
 -- Us3rV0taciones  ----- V0tac10N3s$2025
 -- ----------------------------
 INSERT INTO `adm_usuarios` VALUES (3, 'Sup3rU53r', 'a3e0459970170984ae87486e93331453', 1, 'Super', 'User', '12345678', 'edgardo.flores@ace.gob.sv', 'Activo'); 

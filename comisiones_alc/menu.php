@@ -65,8 +65,13 @@
 
                 </ul>
             </li>
-            
-            <li class="nav-item has-treeview">
+
+
+        <?php
+            break;
+        case "Super":
+        ?>
+           <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-tools"></i>
                     <p> Opciones del sistema
@@ -90,13 +95,7 @@
                     
 
                 </ul>
-            </li>
-
-        <?php
-            break;
-        case "Super":
-        ?>
-            
+            </li> 
             
     <?php
             break;

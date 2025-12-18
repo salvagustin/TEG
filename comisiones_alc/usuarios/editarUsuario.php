@@ -57,40 +57,14 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-              <label for="depto">Departamento</label>
-              <select name="deptoExpeU" id="deptoExpeU" class="form-control">
-                <?php $de = $con->consulta("SELECT * FROM departamentos WHERE eliminado = 0");
-                while ($depto = $con->arreglo($de)) {       ?>
-                  <option value="<?php echo $depto["id_depto"]; ?>" > <?php echo $depto["depto"]; ?></option>
-                <?php } ?>
-              </select>
-              <?php // if ($datos["deptoExpe"] == $depto["id_depto"]) { echo "selected"; }  ?>
-            </div>
-          </div>
-          <div class="col">
-            <div class="form-group">
-              <label for="">Municipio</label>
-              <select name="muniExpeU" id="muniExpeU" class="form-control">
-                <?php $mu = $con->consulta("SELECT * FROM municipios WHERE eliminado = 0");
-                while ($muni = $con->arreglo($mu)) {     ?>
-                  <option value="<?php echo $muni["id_muni"]; ?>"><?php echo $muni["municipio"]; ?></option>
-                <?php } ?>
-                
-              </select>
-            </div>
-          </div>
-
-        </div>
+        
         <div class="row">
 
           <div class="col">
             <div class="form-group">
               <div class="form-group">
                 <label>Rol:</label>
-                <?php $consulta = $con->consulta("SELECT * FROM adm_rol where rol <> '1' "); ?>
+                <?php $consulta = $con->consulta("SELECT * FROM adm_rol  "); ?>
                 <select name="nrolU" id="nrolU" required class="form-control ">
                   <?php while ($dato = $con->arreglo($consulta)) { ?>
                     <option value="<?php echo $dato["rol"]; ?>"><?php echo $dato["con"]; ?></option>

@@ -11,7 +11,7 @@ if($_SESSION["rol" ] == "Super")
 
   $jor = $con->consulta("SELECT periodoDesde, periodoHasta FROM jornadas WHERE eliminado = 0 AND estado = 'Activo'" );
 
-  $da = $con->consulta("SELECT afiliacion, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui, cargo FROM afiliados WHERE eliminado <> 1 ORDER BY primerApellido ASC, segundoApellido ASC, primerNombre ASC");
+  $da = $con->consulta("SELECT afiliacion, primerNombre, segundoNombre, primerApellido, segundoApellido, dui, cargo FROM afiliados WHERE eliminado <> 1 ORDER BY primerApellido ASC, segundoApellido ASC, primerNombre ASC");
  
 
 }
@@ -21,7 +21,7 @@ else
 
   $jor = $con->consulta("SELECT periodoDesde, periodoHasta FROM jornadas WHERE eliminado = 0 AND estado = 'Activo' ");
 
-  $da = $con->consulta("SELECT primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui, cargo FROM afiliados WHERE eliminado <> 1  ORDER BY primerApellido ASC, segundoApellido ASC, primerNombre ASC");
+  $da = $con->consulta("SELECT primerNombre, segundoNombre, primerApellido, segundoApellido, dui, cargo FROM afiliados WHERE eliminado <> 1  ORDER BY primerApellido ASC, segundoApellido ASC, primerNombre ASC");
 
 
 }
@@ -107,7 +107,7 @@ $jornada = $con->arreglo($jor);
           while($dato = $con->arreglo($da)){  $i++ ?> 
           <tr>
             <th scope="row"><?php echo $i; ?></th>
-            <td><?php echo $dato["primerApellido"];?> <?php echo $dato["segundoApellido"]; ?> <?php echo $dato["apellidoCasada"];?>, <?php echo $dato["primerNombre"]; ?> <?php echo $dato["segundoNombre"]; ?></td>
+            <td><?php echo $dato["primerApellido"];?> <?php echo $dato["segundoApellido"]; ?>, <?php echo $dato["primerNombre"]; ?> <?php echo $dato["segundoNombre"]; ?></td>
             <td><?php echo $dato["cargo"]; ?></td>
             <td class="text-center"><?php echo $dato["dui"];?></td>
             <td></td>

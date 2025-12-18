@@ -94,7 +94,7 @@
    <div class="col">        
 <label>Rol</label>
 <?php 
-       $ro = $con->consulta("SELECT * FROM adm_rol where rol == '1'");  ?>
+       $ro = $con->consulta("SELECT * FROM adm_rol ");  ?>
 <select id="rol" class="form-control select2" style="width: 100%;">
 <?php while($rol = $con->arreglo($ro)){ ?>
                 <option value="<?php echo $rol["rol"]; ?>"><?php echo $rol["con"]; ?> </option>
@@ -104,10 +104,7 @@
 
     
 </div>     
-    <script src="plantilla/bootstrap/jquery-3.5.1.slim.min.js"></script>
-    <script src="plantilla/bootstrap/popper.min.js"></script>
-    <script src="plantilla/bootstrap/bootstrap.min.js"></script>
-    <script src="plantilla/bootstrap/jquery.min.js"></script>              
+                 
     
               
             <div class="modal-footer justify-content-between">

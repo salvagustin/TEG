@@ -1,6 +1,6 @@
-function agregardatos(usu, pass, rol, nom, ape, tel, mail1, mail2,deptoExpe, muniExpe){
+function agregardatos(usu, pass, rol, nom, ape, tel, mail1, mail2){
 
-	cadena="usu=" + usu + "&pass=" + pass + "&rol=" + rol + "&nom=" + nom + "&ape=" + ape + "&tel=" + tel + "&deptoExpe=" + deptoExpe + "&muniExpe=" + muniExpe + "&mail1=" + mail1 + "&mail2=" + mail2;
+	cadena="usu=" + usu + "&pass=" + pass + "&rol=" + rol + "&nom=" + nom + "&ape=" + ape + "&tel=" + tel +  "&mail1=" + mail1 + "&mail2=" + mail2;
 
 	$.ajax({
 		type:"POST",
@@ -52,10 +52,8 @@ function agregaform(datos){
   $('#nrolU').val(d[3]);
   $('#nomU').val(d[4]);
   $('#apeU').val(d[5]);
-  $('#telU').val(d[6]);
-$('#deptoExpeU').val(d[7]);
-$('#muniExpeU').val(d[8]);    
- $('#maiU').val(d[9]);
+  $('#telU').val(d[6]);  
+  $('#maiU').val(d[7]);
 
 	
 }
@@ -69,9 +67,7 @@ usua = $('#usuaU').val();
   ape = $('#apeU').val();
   mai = $('#maiU').val();
   tel = $('#telU').val();
-  nrol = $('#nrolU').val();
-  deptoExpe = $('#deptoExpeU').val();
-  muniExpe = $('#muniExpeU').val();    
+  nrol = $('#nrolU').val(); 
 
   cadena = "id="+ id +
            "&usua=" + usua +
@@ -79,8 +75,6 @@ usua = $('#usuaU').val();
            "&ape=" + ape +
            "&mai=" + mai +
            "&tel=" + tel +
-           "&deptoExpe=" + deptoExpe +
-           "&muniExpe=" + muniExpe +
            "&nrol=" + nrol;
 
 	$.ajax({

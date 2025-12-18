@@ -2,8 +2,15 @@
 ini_set('default_charset','UTF8');
 require("seguro.php");
 require("php/conexion.php");
-require __DIR__ . '/config.php';
-require PHP_PATH . 'session_timeout.php';
+
+// 1. Verificación de Rol al inicio del archivo
+// Asumiendo que el rol se guarda en $_SESSION["rol"]
+if ($_SESSION["rol"] !== "Super") {
+    // Si no es Super, redirigir al inicio o mostrar error
+    header("Location: iniciar.php");
+    exit(); 
+}
+
 $con = new cnn();
 ?>
 <!DOCTYPE html>

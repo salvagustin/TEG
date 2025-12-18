@@ -122,11 +122,11 @@ $totalGolbal = $con->arreglo( $toV );
   <div class="col">
     <p class="text-justify" style="font-size:24px">En las instalaciones de la Agencia de Ciberseguridad del Estado, a las <?php echo strtolower(@$V->ValorEnLetras(date("H", strtotime($jornada["horaHasta"])), '')); ?> horas
       <?php if (date("i", strtotime($jornada["horaHasta"])) <> 00) { echo "con " . strtolower(@$V->ValorEnLetras(date("i", strtotime($jornada["horaHasta"])), '')) . " minutos";} ?>
-      del día <?php echo strtolower(trim(@$V->ValorEnLetras(date("d", strtotime($jornada["fecha"])), ''))); ?> <?php echo $fechaEleccion; ?> <?php echo strtolower(trim(@$V->ValorEnLetras(date("Y", strtotime($jornada["fecha"])), ''))); ?>, conforme a lo prescripto en el artículo 34 del Reglamento de la Ley de Ética Gubernamental, se procede a dejar constancia del escrutinio final del procedimiento de elección de los miembros propietario y suplente en representación de los empleados de la ACE, ante la Comisión de Ética Gubernamental. El evento electoral se realizó por medio del sistema para elección de miembros de comisiones de Ética Gubernamental Desarrollándose de la siguiente manera: I) Participaron como candidatos los servidores públicos siguientes: 
+      del día <?php echo strtolower(trim(@$V->ValorEnLetras(date("d", strtotime($jornada["fecha"])), ''))); ?> <?php echo $fechaEleccion; ?> <?php echo strtolower(trim(@$V->ValorEnLetras(date("Y", strtotime($jornada["fecha"])), ''))); ?>, conforme a lo prescripto en el artículo 34 del Reglamento de la Ley de Ética Gubernamental, se procede a dejar constancia del escrutinio final del procedimiento de elección de los miembros propietario y suplente en representación de los empleados de la Agencia de Ciberseguridad del Estado, ante la Comisión de Ética Gubernamental. El evento electoral se realizó por medio del sistema para elección de miembros de comisiones de Ética Gubernamental Desarrollándose de la siguiente manera: I) Participaron como candidatos los servidores públicos siguientes: 
       <?php while ($candidatos = $con->arreglo($can)) {  ?>
       <b><?php echo $candidatos["primerNombre"]; ?> <?php echo $candidatos["segundoNombre"]; ?> <?php echo $candidatos["primerApellido"]; ?> <?php echo $candidatos["segundoApellido"];  ?></b>, de <?php echo $V->ValorEnLetras($candidatos["edad"],''); ?> años de edad,
       <?php if ($candidatos["sexo"] == "MASCULINO") { echo " empleado"; } else if ($candidatos["sexo"] == "FEMENINO") { echo " Empleada"; } ?>
-      , del domicilio de <?php echo $candidatos["domicilio"]; ?>, de nacionalidad salvadoreña, con Documento Único de Identidad número
+       del domicilio de <?php echo $candidatos["domicilio"]; ?>, de nacionalidad salvadoreña, con Documento Único de Identidad número
       <?php
       $dui1 = substr( $candidatos[ "dui" ], 0, 8 );
       $dui2 = substr( $candidatos[ "dui" ], 9, 1 );
@@ -137,7 +137,7 @@ $totalGolbal = $con->arreglo( $toV );
 
       }
       ?>
-      II) El dato del escrutinio final refleja que concurrieron a emitir su voto <?php echo strtolower(trim(@$V->ValorEnLetras($conteo["total"], ''))) ?> servidores públicos de la municipalidad. Una vez cerrada la elección y contabilizados los votos por medio del sistema mencionado, se obtuvieron los resultados siguientes: Número de abstenciones <?php echo strtolower(trim(@$V->ValorEnLetras($abstenciones["abstenciones"], ''))); ?>, mientras que los votos por persona determinada fueron distribuidos de la siguiente manera:
+      II) El dato del escrutinio final refleja que concurrieron a emitir su voto <?php echo strtolower(trim(@$V->ValorEnLetras($conteo["total"], ''))) ?> servidores públicos de la Agencia de Ciberseguridad del Estado. Una vez cerrada la elección y contabilizados los votos por medio del sistema mencionado, se obtuvieron los resultados siguientes: Número de abstenciones <?php echo strtolower(trim(@$V->ValorEnLetras($abstenciones["abstenciones"], ''))); ?>, mientras que los votos por persona determinada fueron distribuidos de la siguiente manera:
       
       <?php
 
@@ -146,7 +146,7 @@ $totalGolbal = $con->arreglo( $toV );
       while ( $dato = $con->arreglo( $da ) ) {
 
 
-        $can = $con->consulta( "SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_candidato = '$dato[id_candidato]' AND candidatos.eliminado = 0 " );
+        $can = $con->consulta( "SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_candidato = '$dato[id_candidato]'  " );
 
         $datos = $con->arreglo( $can );
 
@@ -161,43 +161,50 @@ $totalGolbal = $con->arreglo( $toV );
 </div>
 <div class="row">
   <div class="col text-center">
-    <table cellpadding="0" cellspacing="0" class="table table-borderless">
+    <table class="table table-borderless" style="table-layout: fixed; width: 100%;">
+      
+      <tr><td colspan="3">&nbsp;</td></tr>
+      <tr><td colspan="3">&nbsp;</td></tr>
+
       <tr class="text-center">
-        <td colspan="2" class="text-center">&nbsp;</td>
-        <td class="text-center">&nbsp;</td>
+        <td colspan="2">
+            <div class="linea-firma"><?php echo $parametro["nombreAlcalde"]; ?></div>
+            <small><?php echo $parametro["cargoAlcalde"]; ?></small>
+        </td>
+        <td>
+            <div class="linea-firma"><?php echo $parametro["observador"]; ?></div>
+            <small><?php echo $parametro["cargo_observador"]; ?></small>
+        </td>
       </tr>
+
+      <tr><td colspan="3">&nbsp;</td></tr>
+      <tr><td colspan="3">&nbsp;</td></tr>
+
       <tr class="text-center">
-        <td colspan="2" class="text-center">&nbsp;</td>
-        <td class="text-center">&nbsp;</td>
-      </tr>
-      <tr class="text-center">
-        <td colspan="2" class="text-center"><?php echo $parametro["nombreAlcalde"]; ?></td>
-        <td class="text-center"><?php echo $parametro["observador"]; ?></td>
-      </tr>
-      <tr class="text-center">
-        <td colspan="2" class="text-center"><?php echo $parametro["cargoAlcalde"]; ?></td>
-        <td class="text-center"><?php echo $parametro["cargo_observador"]; ?></td>
-      </tr>
-      <tr class="text-center">
-        <td colspan="2" class="text-center">&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr class="text-center">
-        <td colspan="2" class="text-center">&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr class="text-center">
-        <td class="text-center"><?php echo $parametro["miembro1"]; ?></td>
-        <td class="text-center"><?php echo $parametro["miembro2"]; ?></td>
-        <td class="text-center"><?php echo $parametro["miembro3"]; ?></td>
-      </tr>
-      <tr class="text-center">
-        <td class="text-center"><?php echo $parametro["cargo1"]; ?></td>
-        <td class="text-center"><?php echo $parametro["cargo2"]; ?></td>
-        <td class="text-center"><?php echo $parametro["cargo3"]; ?></td>
+        <td>
+            <div class="linea-firma"><?php echo $parametro["miembro1"]; ?></div>
+            <small><?php echo $parametro["cargo1"]; ?></small>
+        </td>
+        <td>
+            <div class="linea-firma"><?php echo $parametro["miembro2"]; ?></div>
+            <small><?php echo $parametro["cargo2"]; ?></small>
+        </td>
+        <td>
+            <div class="linea-firma"><?php echo $parametro["miembro3"]; ?></div>
+            <small><?php echo $parametro["cargo3"]; ?></small>
+        </td>
       </tr>
     </table>
   </div>
 </div>
+<style>
+.linea-firma {
+    border-top: 1px solid #000 !important;
+    padding-top: 5px;
+    width: 70%;       /* Ancho de la línea respecto a la columna */
+    margin: 0 auto;   /* Centra el DIV dentro de la celda */
+    display: block;   /* Necesario para que respete el ancho y margen */
+}
+</style>
 </body>
 </html>

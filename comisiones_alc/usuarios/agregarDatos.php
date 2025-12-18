@@ -13,12 +13,10 @@ $fecha = date("Y-m-d");
     $tel = $_POST["tel"]; 
     $mail1 = $_POST["mail1"];
     $mail2 = $_POST["mail2"];
-    $deptoExpe = $_POST["deptoExpe"]; 
-    $muniExpe = $_POST["muniExpe"];
 
 //if($mail1==$mail2)
 //{
-	$sql = $con->consulta("INSERT INTO adm_usuarios VALUES (NULL,'$deptoExpe', '$muniExpe', '$usu', '$pass', '$rol', '$nom', '$ape', '$tel', '$mail1', 'Activo')");
+	$sql = $con->consulta("INSERT INTO adm_usuarios VALUES (NULL, '$usu', '$pass', '$rol', '$nom', '$ape', '$tel', '$mail1', 'Activo')");
 //}
 //else { $sql; }
 
