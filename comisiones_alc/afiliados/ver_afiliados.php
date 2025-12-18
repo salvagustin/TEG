@@ -55,8 +55,25 @@ $con = new cnn();
 <a href="afiliaciones/afiliacion.php" class="btn btn-primary " style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-plus"></i> Nuevo afiliado</a>
 <a href="afiliaciones/subirAfiliados.php" class="btn btn-primary text-white" style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-file-import"></i> Importar</a>
 <a href="afiliados/descargarPadron.php" target="_blank" class="btn btn-primary text-white" style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-file-download" ></i> Reporte</a>
-<a href="" target="_blank" class="btn btn-primary text-white" style="background-color:#131d2e; border-color: #131d2e; "><i class="fas fa-share" ></i> Enviar</a>      
-      </div>
+<button class="btn btn-success" onclick="iniciarEnvioMasivo()">
+    <i class="fas fa-paper-plane"></i> Enviar a todos los afiliados
+</button>      
+</div>
+<div class="modal fade" id="modalProgreso" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Enviando Correos...</h4>
+            </div>
+            <div class="modal-body">
+                <p id="statusEnvio">Preparando lista...</p>
+                <div class="progress progress-sm active">
+                    <div id="barraProgreso" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
   </div>
   <!-- /.card-header -->
   <div class="card-body">
@@ -95,14 +112,16 @@ $con = new cnn();
               if ($ver["eliminado"] == 0) { 
               ?>
                   <td>
-                    <a onclick="confirmar(event)" href="<?php echo "javascript:editar('afiliados/nuevoCodigo.php?id=$ver[id]',600,362)"; ?>" class="btn btn-secondary" title="Restablecer Codigo"><i class="fas fa-sync"></i></a>
-                
+                      <button class="btn btn-primary" onclick="enviarCorreoAfiliado('<?php echo $ver['id']; ?>')" title="Enviar Correo">
+                          <i class="fas fa-envelope"></i>
+                      </button>                
                     <button class="btn btn-warning" onclick="preguntarSiNo('<?php echo $ver['id']; ?>')" title="Inactivar Afiliado"><i class="fas fa-user-times"></i></button>
                   
                     <a href="afiliaciones/ActualizacionDatos.php?id=<?php echo base64_encode($ver['id']); ?>" 
                       class="btn btn-info" title="Editar Afiliado">
                       <i class="fa fa-pen"></i>
                     </a>
+                    
                   </td>
               <?php 
               } else { 
@@ -118,6 +137,16 @@ $con = new cnn();
 
           </tr>
         <?php } ?>
+        <script>
+    const idsParaEnviar = <?php 
+        $ids = [];
+        $res = $con->consulta("SELECT id FROM afiliados WHERE eliminado = 0 AND correo IS NOT NULL AND correo != ''");
+        while($r = $con->arreglo($res)) { 
+            $ids[] = $r['id']; 
+        }
+        echo json_encode($ids); 
+    ?>;
+</script>
       </tbody>
     </table>
   </div>
@@ -135,46 +164,5 @@ $con = new cnn();
 
   });
 
-
-
-  function confirmar(e) {
-
-  e.preventDefault()
-
-  swal({
-
-    title: 'Cambiar codigo',
-
-    text: "¿Estás seguro?",
-
-    type: 'warning',
-
-    showCancelButton: true,
-
-    confirmButtonColor: '#3085d6',
-
-    cancelButtonColor: '#d33',
-
-    confirmButtonText: 'Sí, cambiar'
-
-  }).then((result) => {
-
-    if (result.value) {
-
-      let linkElement = e.target
-
-      while (!linkElement.href) {
-
-        linkElement = linkElement.parentElement
-
-      }     
-
-      window.location.href = linkElement.href
-
-    }
-
-  })
-
-}
 
 </script>

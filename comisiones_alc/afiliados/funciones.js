@@ -139,3 +139,80 @@ function ActivarDatos(id) {
         }
     });
 }
+
+function enviarCorreoAfiliado(id) {
+    Swal.fire({
+        title: '¿Enviar correo?',
+        text: "Se enviará una notificación al afiliado",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#131d2e',
+        confirmButtonText: 'Sí, enviar'
+    }).then((result) => {
+        if (result.value) {
+            $.ajax({
+                type: "POST",
+                url: "afiliados/enviar_correo.php",
+                data: "id_afiliado=" + id,
+                success: function(r) {
+                    if (r == 1) {
+                        Swal.fire('Enviado', 'El correo se envió correctamente', 'success');
+                    } else if (r == "error_correo_vacio") {
+                        Swal.fire('Error', 'El afiliado no tiene correo registrado', 'warning');
+                    } else {
+                        Swal.fire('Error', 'No se pudo enviar el correo', 'error');
+                    }
+                }
+            });
+        }
+    });
+}
+
+async function iniciarEnvioMasivo() {
+    // Ya no usamos PHP aquí, usamos la constante que definimos en el archivo principal
+    if (!idsParaEnviar || idsParaEnviar.length === 0) {
+        return Swal.fire('Aviso', 'No hay afiliados con correo electrónico', 'info');
+    }
+
+    const confirmacion = await Swal.fire({
+        title: '¿Confirmar envío masivo?',
+        text: `Se enviarán ${idsParaEnviar.length} correos. Esto puede tardar unos minutos.`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#28a745',
+        confirmButtonText: 'Sí, iniciar envío'
+    });
+
+    if (!confirmacion.value) return;
+
+    $('#modalProgreso').modal('show');
+    let enviados = 0;
+    let total = idsParaEnviar.length;
+
+    for (let i = 0; i < total; i++) {
+        let idAfi = idsParaEnviar[i];
+        
+        // Actualizar interfaz
+        let porcentaje = Math.round(((i + 1) / total) * 100);
+        $('#barraProgreso').css('width', porcentaje + '%');
+        $('#statusEnvio').text(`Enviando ${i + 1} de ${total}...`);
+
+        // Petición al servidor
+        try {
+            const response = await $.ajax({
+                type: "POST",
+                url: "afiliados/enviar_masivo.php",
+                data: { id: idAfi }
+            });
+            if (response.trim() === "enviado") enviados++;
+        } catch (error) {
+            console.error("Error enviando ID: " + idAfi);
+        }
+        
+        // Pausa de 200ms para evitar bloqueos de SMTP
+        await new Promise(resolve => setTimeout(resolve, 200));
+    }
+
+    $('#modalProgreso').modal('hide');
+    Swal.fire('Proceso Terminado', `Se enviaron correctamente ${enviados} correos de ${total}.`, 'success');
+}

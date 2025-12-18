@@ -97,7 +97,7 @@ $hora = date("H:i:s");
             $codigo = $_POST["codigo"];
 			  
 			
-				$consulta = $db->consulta("SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui, codigo FROM afiliados WHERE eliminado <> 1 AND codigo = '$codigo'");
+				$consulta = $db->consulta("SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, dui, codigo FROM afiliados WHERE eliminado <> 1 AND codigo = '$codigo'");
 			
             
 
@@ -129,7 +129,7 @@ $hora = date("H:i:s");
                 session_start();
                 $_SESSION["seg"] = "ok";
                 $_SESSION["id"] = $view["id"];
-                $_SESSION["nom"] = $view["primerNombre"] . " " . $view["segundoNombre"] . " " . $view["primerApellido"] . " " . $view["segundoApellido"] . " " . $view["apellidoCasada"];
+                $_SESSION["nom"] = $view["primerNombre"] . " " . $view["segundoNombre"] . " " . $view["primerApellido"] . " " . $view["segundoApellido"];
                 $_SESSION["dui"] = $view["dui"];
               }
                 }
