@@ -31,6 +31,7 @@ $hora = date("H:s:i");
         $segundoNombre      = mb_strtoupper($_POST["segundoNombre"]);
         $primerApellido     = mb_strtoupper($_POST["primerApellido"]);
         $segundoApellido    = mb_strtoupper($_POST["segundoApellido"]);
+        $sexo               = mb_strtoupper($_POST["sexo"]);
         $dui                = $_POST["dui"];
         $fechaNac           = $_POST["fechaNac"];
         $cargo              = mb_strtoupper($_POST["cargo"]);
@@ -46,8 +47,8 @@ $hora = date("H:s:i");
         if($bus==0) 
         {
         // Código CORREGIDO (23 valores, especificando las 23 columnas de la tabla visible)
-        $insert = $con->consulta("INSERT INTO afiliados (id, primerNombre, segundoNombre, primerApellido, segundoApellido,  dui, fechaNac, cargo, correo,  codigo, eliminado) 
-                                            VALUES(NULL,'$primerNombre', '$segundoNombre', '$primerApellido', '$segundoApellido', '$dui', '$fechaNac',  '$cargo',  '$correo',  '$codigo',  0)");  
+        $insert = $con->consulta("INSERT INTO afiliados (id, primerNombre, segundoNombre, primerApellido, segundoApellido, sexo,  dui, fechaNac, cargo, correo,  codigo, eliminado) 
+                                            VALUES(NULL,'$primerNombre', '$segundoNombre', '$primerApellido', '$segundoApellido', '$sexo', '$dui', '$fechaNac',  '$cargo',  '$correo',  '$codigo',  0)");  
         }
       }
     ?>

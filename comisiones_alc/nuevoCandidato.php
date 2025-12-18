@@ -9,11 +9,11 @@ $fecha = date("Y-m-d");
 
 if($_SESSION["rol"] == "Administrador")
 {
-  $can = $con->consulta("SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui FROM afiliados  WHERE eliminado <> 1 ORDER BY primerNombre ASC, segundoNombre ASC, primerApellido ASC");
+  $can = $con->consulta("SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, dui FROM afiliados  WHERE eliminado <> 1 ORDER BY primerNombre ASC, segundoNombre ASC, primerApellido ASC");
 }
 else
 {
-  $can = $con->consulta("SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui FROM afiliados  WHERE eliminado <> 1 ORDER BY primerNombre ASC, segundoNombre ASC, primerApellido ASC");
+  $can = $con->consulta("SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, dui FROM afiliados  WHERE eliminado <> 1 ORDER BY primerNombre ASC, segundoNombre ASC, primerApellido ASC");
 }
 
 

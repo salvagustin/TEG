@@ -141,7 +141,7 @@ $asis3 = substr($totalVotos, 2, 1);
           <th colspan="3" class="text-center">Cifra en números</th>
           <th colspan="3" class="text-center">Cifra en letras</th>
           <tbody>
-            <?php $da = $con->consulta("SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada, candidatos.id_candidato, afiliados.cargo FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_jornada = '$id' ");
+            <?php $da = $con->consulta("SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, candidatos.id_candidato, afiliados.cargo FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_jornada = '$id' ");
             while ($dato = $con->arreglo($da)) {
               $vo = $con->consulta("SELECT SUM(voto) AS votos FROM votacion WHERE id_jornada = '$id' AND id_candidato = '$dato[id_candidato]' AND votacion.voto = 1 ");
               $votos = $con->arreglo($vo);
@@ -152,7 +152,7 @@ $asis3 = substr($totalVotos, 2, 1);
               $votCan3 = substr($totalVotoss, 2, 1);
             ?>
               <tr>
-                <td style="border: 1px solid #007bff;"><?php echo $dato["primerNombre"]; ?> <?php echo $dato["segundoNombre"]; ?> <?php echo $dato["primerApellido"]; ?> <?php echo $dato["segundoApellido"]; ?> <?php echo $dato["apellidoCasada"]; ?></td>
+                <td style="border: 1px solid #007bff;"><?php echo $dato["primerNombre"]; ?> <?php echo $dato["segundoNombre"]; ?> <?php echo $dato["primerApellido"]; ?> <?php echo $dato["segundoApellido"]; ?></td>
                 <td align="center" style="border: 1px solid #007bff;"><?php echo $dato["cargo"]; ?></td>
                 <td align="center" style="border: 1px solid #007bff;"><?php echo $votCan1; ?></td>
                 <td align="center" style="border: 1px solid #007bff;"><?php echo $votCan2; ?></td>

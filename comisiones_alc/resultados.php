@@ -184,9 +184,9 @@ $jornada = $con->arreglo($jo);
                             </ul>
                           </td>
                           <td>
-                            <?php $can = $con->consulta("SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_candidato = '$dato[id_candidato]' AND candidatos.eliminado = 0 AND candidatos.estado = 'Activo'");
+                            <?php $can = $con->consulta("SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_candidato = '$dato[id_candidato]'  AND candidatos.estado = 'Activo'");
                             $datos = $con->arreglo($can); ?>
-                            <?php echo $datos["primerNombre"]; ?> <?php echo $datos["segundoNombre"]; ?> <?php echo $datos["primerApellido"]; ?> <?php echo $datos["segundoApellido"]; ?> <?php echo $datos["apellidoCasada"]; ?>
+                            <?php echo $datos["primerNombre"]; ?> <?php echo $datos["segundoNombre"]; ?> <?php echo $datos["primerApellido"]; ?> <?php echo $datos["segundoApellido"]; ?>
                           </td>
                           <td class="project-state">
                             <a class="btn  btn-lg" href="#">

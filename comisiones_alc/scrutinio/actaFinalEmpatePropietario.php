@@ -48,7 +48,7 @@ $coo = $con->consulta( "SELECT COUNT(id) AS conteo FROM afiliados WHERE eliminad
 $toAfi = $con->arreglo( $coo );
 
 
-$can = $con->consulta( "SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada, afiliados.dui,   afiliados.sexo, candidatos.id_candidato, candidatos.edad, candidatos.domicilio FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_jornada = '$id' " );
+$can = $con->consulta( "SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.dui,   afiliados.sexo, candidatos.id_candidato, candidatos.edad, candidatos.domicilio FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_jornada = '$id' " );
 
 
 $votNu = $con->consulta( "SELECT SUM(nulos) AS nulos FROM votacion WHERE id_jornada = '$id'  " );
@@ -124,7 +124,7 @@ $totalGolbal = $con->arreglo( $toV );
       <?php if (date("i", strtotime($jornada["horaHasta"])) <> 00) { echo "con " . strtolower(@$V->ValorEnLetras(date("i", strtotime($jornada["horaHasta"])), '')) . " minutos";} ?>
       del día <?php echo strtolower(trim(@$V->ValorEnLetras(date("d", strtotime($jornada["fecha"])), ''))); ?> <?php echo $fechaEleccion; ?> <?php echo strtolower(trim(@$V->ValorEnLetras(date("Y", strtotime($jornada["fecha"])), ''))); ?>, conforme a lo prescripto en el artículo 34 del Reglamento de la Ley de Ética Gubernamental, se procede a dejar constancia del escrutinio final del procedimiento de elección de los miembros propietario y suplente en representación de los empleados de la ACE, ante la Comisión de Ética Gubernamental. El evento electoral se realizó por medio del sistema para elección de miembros de comisiones de Ética Gubernamental Desarrollándose de la siguiente manera: I) Participaron como candidatos los servidores públicos siguientes: 
       <?php while ($candidatos = $con->arreglo($can)) {  ?>
-      <b><?php echo $candidatos["primerNombre"]; ?> <?php echo $candidatos["segundoNombre"]; ?> <?php echo $candidatos["primerApellido"]; ?> <?php echo $candidatos["segundoApellido"]; ?> <?php echo $candidatos["apellidoCasada"]; ?></b>, de <?php echo $V->ValorEnLetras($candidatos["edad"],''); ?> años de edad,
+      <b><?php echo $candidatos["primerNombre"]; ?> <?php echo $candidatos["segundoNombre"]; ?> <?php echo $candidatos["primerApellido"]; ?> <?php echo $candidatos["segundoApellido"];  ?></b>, de <?php echo $V->ValorEnLetras($candidatos["edad"],''); ?> años de edad,
       <?php if ($candidatos["sexo"] == "MASCULINO") { echo " empleado"; } else if ($candidatos["sexo"] == "FEMENINO") { echo " Empleada"; } ?>
       , del domicilio de <?php echo $candidatos["domicilio"]; ?>, de nacionalidad salvadoreña, con Documento Único de Identidad número
       <?php
@@ -146,12 +146,12 @@ $totalGolbal = $con->arreglo( $toV );
       while ( $dato = $con->arreglo( $da ) ) {
 
 
-        $can = $con->consulta( "SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_candidato = '$dato[id_candidato]' AND candidatos.eliminado = 0 " );
+        $can = $con->consulta( "SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_candidato = '$dato[id_candidato]' AND candidatos.eliminado = 0 " );
 
         $datos = $con->arreglo( $can );
 
 
-        echo "<b>" . $datos[ "primerNombre" ] . " " . $datos[ "segundoNombre" ] . " " . $datos[ "primerApellido" ] . " " . $datos[ "segundoApellido" ] . " " . $datos[ "apellidoCasada" ] . "</b>, obtuvo " . strtolower( trim( @$V->ValorEnLetras( $dato[ "total" ], '' ) ) ) . " votos. ";
+        echo "<b>" . $datos[ "primerNombre" ] . " " . $datos[ "segundoNombre" ] . " " . $datos[ "primerApellido" ] . " " . $datos[ "segundoApellido" ] .  "</b>, obtuvo " . strtolower( trim( @$V->ValorEnLetras( $dato[ "total" ], '' ) ) ) . " votos. ";
 
 
       }

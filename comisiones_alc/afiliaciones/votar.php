@@ -39,7 +39,7 @@ $pe = $con->consulta("SELECT id_jornada, periodoDesde, periodoHasta, descripcion
 
 $periodo = $con->arreglo($pe);
 
-$can = $con->consulta("SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.sexo, afiliados.segundoApellido, afiliados.apellidoCasada, candidatos.foto, candidatos.id_candidato, candidatos.id_jornada FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.estado = 'Activo' AND candidatos.id_jornada = '$periodo[id_jornada]' ORDER BY RAND() LIMIT 50");
+$can = $con->consulta("SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, candidatos.foto, candidatos.id_candidato, candidatos.id_jornada FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.estado = 'Activo' AND candidatos.id_jornada = '$periodo[id_jornada]' ORDER BY RAND() LIMIT 50");
 
 ?>
 

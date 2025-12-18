@@ -157,7 +157,7 @@ else
                                 <label for="">Candidato *</label>
                                 <select name="candidato" id="candidato" class="form-control select2">
                                   <?php
-                                    $can = $con->consulta("SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, apellidoCasada, dui FROM afiliados WHERE eliminado <> 1 ORDER BY primerNombre ASC, segundoNombre ASC, primerApellido ASC");
+                                    $can = $con->consulta("SELECT id, primerNombre, segundoNombre, primerApellido, segundoApellido, dui FROM afiliados WHERE eliminado <> 1 ORDER BY primerNombre ASC, segundoNombre ASC, primerApellido ASC");
                                     while ($candi = $con->arreglo($can)) 
                                     {
                                   ?>

@@ -84,6 +84,16 @@ $hora = date("H:s:i");
                           <input type="date" name="fechaNac" id="fechaNac" class="form-control" required>
                         </div>
                       </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="sexo">Sexo</label>
+                          <select name="sexo" id="sexo" class="form-control" required>
+                            <option value="">Seleccione...</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                          </select>
+                        </div>
+                      </div>
                     </div>
                                      
                   <hr class="bg-primary">

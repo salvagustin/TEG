@@ -105,6 +105,7 @@ if (isset($_POST["boton"])) {
 
                 $cargo = mysqli_real_escape_string($db, trim($sheet->getCell("E$row")->getFormattedValue() ?? ''));
                 $correo = mysqli_real_escape_string($db, trim($sheet->getCell("G$row")->getFormattedValue() ?? ''));
+                $sexo = mysqli_real_escape_string($db, trim($sheet->getCell("H$row")->getFormattedValue() ?? ''));
                 // CORRECCIÓN DEL CÓDIGO ALEATORIO ÚNICO
                 // Usamos microtime() y el DUI para que nunca sea igual aunque se inserten rápido
                 $cod = mb_strtoupper(substr(md5(microtime() . $dui), 0, 6));
@@ -116,9 +117,9 @@ if (isset($_POST["boton"])) {
                     if ($con->conteo($resCheck) == 0) {
                         // Eliminamos el campo apellidoCasada de la consulta como pediste
                         $sql = "INSERT INTO afiliados (
-                            primerNombre, segundoNombre, primerApellido, segundoApellido, dui, fechaNac, cargo, correo, codigo, eliminado
+                            primerNombre, segundoNombre, primerApellido, segundoApellido, sexo, dui, fechaNac, cargo, correo, codigo, eliminado
                         ) VALUES (
-                            '$n1', '$n2', '$a1', '$a2', '$dui', $fechaNacFinal, '$cargo', '$correo','$cod', '$elim'
+                            '$n1', '$n2', '$a1', '$a2','$sexo' ,'$dui', $fechaNacFinal, '$cargo', '$correo','$cod', '$elim'
                         )";
                         
                         if ($con->consulta($sql)) $insertados++;

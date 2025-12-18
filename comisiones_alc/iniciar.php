@@ -213,11 +213,24 @@ while ($row = $con->arreglo($res_ranking)) {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                indexAxis: 'y', // Gráfico horizontal para mejor lectura de nombres
+                indexAxis: 'y', 
                 plugins: { legend: { display: false } },
                 scales: {
-                    x: { beginAtZero: true, grid: { display: false } },
-                    y: { grid: { display: false } }
+                    x: { 
+                        beginAtZero: true, 
+                        grid: { display: false },
+                        // --- CONFIGURACIÓN PARA NÚMEROS ENTEROS ---
+                        ticks: {
+                            stepSize: 1,      // Fuerza a que los saltos sean de 1 en 1
+                            precision: 0,     // Elimina los decimales del formato
+                            callback: function(value) {
+                                if (value % 1 === 0) { return value; } // Solo muestra si es entero
+                            }
+                        }
+                    },
+                    y: { 
+                        grid: { display: false } 
+                    }
                 }
             }
         });

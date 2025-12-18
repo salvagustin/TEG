@@ -30,18 +30,18 @@ $con = new cnn();
         <?php
           if($_SESSION["rol"] == "Administrador")
           {
-            $sql = $con->consulta("SELECT candidatos.id_candidato, candidatos.foto, afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada, jornadas.periodoDesde, jornadas.periodoHasta,jornadas.descripcion, candidatos.estado, afiliados.cargo, candidatos.edad, candidatos.profesion, candidatos.domicilio, jornadas.eliminado FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id INNER JOIN jornadas ON candidatos.id_jornada = jornadas.id_jornada ");
+            $sql = $con->consulta("SELECT candidatos.id_candidato, candidatos.foto, afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido,  jornadas.periodoDesde, jornadas.periodoHasta,jornadas.descripcion, candidatos.estado, afiliados.cargo, candidatos.edad, candidatos.profesion, candidatos.domicilio, jornadas.eliminado FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id INNER JOIN jornadas ON candidatos.id_jornada = jornadas.id_jornada ");
           }
           else
           {
-            $sql = $con->consulta("SELECT candidatos.id_candidato, candidatos.foto, afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada, jornadas.periodoDesde, jornadas.periodoHasta,jornadas.descripcion, candidatos.estado, afiliados.cargo, candidatos.edad, candidatos.profesion, candidatos.domicilio, jornadas.eliminado FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id INNER JOIN jornadas ON candidatos.id_jornada = jornadas.id_jornada ");
+            $sql = $con->consulta("SELECT candidatos.id_candidato, candidatos.foto, afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido,  jornadas.periodoDesde, jornadas.periodoHasta,jornadas.descripcion, candidatos.estado, afiliados.cargo, candidatos.edad, candidatos.profesion, candidatos.domicilio, jornadas.eliminado FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id INNER JOIN jornadas ON candidatos.id_jornada = jornadas.id_jornada ");
           }
         
         while ($ver = $con->arreglo($sql)) {
         ?>
           <tr>
             <td><img src="candidatos/fotos/<?php echo $ver["foto"]; ?>" whidth="53px" height="66px"></td>
-            <td><?php echo $ver["primerNombre"]; ?> <?php echo $ver["segundoNombre"]; ?> <?php echo $ver["primerApellido"]; ?> <?php echo $ver["segundoApellido"]; ?> <?php echo $ver["apellidoCasada"]; ?></td>
+            <td><?php echo $ver["primerNombre"]; ?> <?php echo $ver["segundoNombre"]; ?> <?php echo $ver["primerApellido"]; ?> <?php echo $ver["segundoApellido"]; ?></td>
             <td><?php echo $ver["edad"]; ?></td>
             <td><?php echo date('d/m/Y', strtotime($ver["periodoDesde"])); ?> al <?php echo date('d/m/Y', strtotime($ver["periodoHasta"])); ?></td>
             <td><?php echo $ver["descripcion"]; ?></td>

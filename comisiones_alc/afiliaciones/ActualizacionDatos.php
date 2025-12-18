@@ -12,6 +12,7 @@ if (isset($_POST["boton"])) {
     $segundoNombre   = mb_strtoupper($_POST["segundoNombre"]);
     $primerApellido  = mb_strtoupper($_POST["primerApellido"]);
     $segundoApellido = mb_strtoupper($_POST["segundoApellido"]);
+    $sexo            = mb_strtoupper($_POST["sexo"]);
     $dui             = $_POST["dui"];
     $fechaNac        = $_POST["fechaNac"];
     $cargo           = mb_strtoupper($_POST["cargo"]);
@@ -23,9 +24,10 @@ if (isset($_POST["boton"])) {
         segundoNombre = '$segundoNombre', 
         primerApellido = '$primerApellido', 
         segundoApellido = '$segundoApellido', 
+        sexo = '$sexo',
         dui = '$dui', 
         fechaNac = '$fechaNac', 
-        cargo = '$cargo' 
+        cargo = '$cargo', 
         correo = '$correo'
         WHERE id = '$id'");
 
@@ -50,7 +52,7 @@ $datos = $con->arreglo($busque);
     <link rel="stylesheet" href="../plantilla/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../plantilla/plugins/fontawesome-free/css/all.min.css">
     <script src="../plantilla/alertifyjs/alertify.js"></script>
-    <link href="../plantilla/dist/img/icon.jpg" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <link href="../plantilla/dist/img/LogoESA.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
 </head>
 
 <body>
@@ -128,8 +130,17 @@ $datos = $con->arreglo($busque);
                           <input type="date" name="fechaNac" value="<?php echo  $datos["fechaNac"]; ?>" id="fechaNac" class="form-control">
                         </div>
                       </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="sexo">Sexo</label>
+                          <select name="sexo" id="sexo" class="form-control">
+                            <option value="">Seleccione...</option>
+                            <option value="M" <?php if($datos["sexo"] == "M") echo "selected"; ?>>Masculino</option>
+                            <option value="F" <?php if($datos["sexo"] == "F") echo "selected"; ?>>Femenino</option>
+                          </select>
+                          </div>
+                      </div>
                     </div>
-                    
                 
                   <hr class="bg-primary">
                   <div class="row">

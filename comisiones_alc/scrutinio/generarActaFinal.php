@@ -42,12 +42,12 @@ $asis1 = substr( $totalVotos, 0, 1 );
 $asis2 = substr( $totalVotos, 1, 1 );
 $asis3 = substr( $totalVotos, 2, 1 );
 
-$coo = $con->consulta( "SELECT COUNT(id) AS conteo FROM afiliados WHERE eliminado = 0 " );
+$coo = $con->consulta( "SELECT COUNT(id) AS conteo FROM afiliados  " );
 
 $toAfi = $con->arreglo( $coo );
 
 
-$can = $con->consulta( "SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada, afiliados.dui,   afiliados.sexo, candidatos.id_candidato, candidatos.edad, candidatos.domicilio,afiliados.cargo FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_jornada = '$id' " );
+$can = $con->consulta( "SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.dui,   afiliados.sexo, candidatos.id_candidato, candidatos.edad, candidatos.domicilio,afiliados.cargo FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_jornada = '$id' " );
 
 
 $votNu = $con->consulta( "SELECT SUM(nulos) AS nulos FROM votacion WHERE id_jornada = '$id' " );
@@ -124,7 +124,7 @@ $totalGolbal = $con->arreglo( $toV );
       <?php if (date("i", strtotime($jornada["horaHasta"])) <> 00) { echo "con " . strtolower(@$V->ValorEnLetras(date("i", strtotime($jornada["horaHasta"])),' ')) . " minutos";} ?>
       del día <?php echo strtolower(trim(@$V->ValorEnLetras(date("d", strtotime($jornada["fecha"])), ' '))); ?> <?php echo $fechaEleccion; ?> <?php echo strtolower(trim(@$V->ValorEnLetras(date("Y", strtotime($jornada["fecha"])), ' '))); ?>, conforme a lo prescrito en el artículo 34 del Reglamento de la Ley de Ética Gubernamental, se procede a dejar constancia del escrutinio final del procedimiento de elección de los miembros propietario y suplente en representación de los empleados de la Agencia de Ciberseguridad del Estado ante la Comisión de Ética Gubernamental. El evento electoral, se realizó por medio del Sistema para elección de miembros de Comisiones de Ética Gubernamental, desarrollándose de la siguiente manera: I) Participaron como candidatos los servidores públicos siguientes: 
       <?php while ($candidatos = $con->arreglo($can)) {  ?>
-      <b><?php echo trim($candidatos["primerNombre"]); ?> <?php echo trim($candidatos["segundoNombre"]); ?> <?php echo trim($candidatos["primerApellido"]); ?> <?php echo trim($candidatos["segundoApellido"]); ?> <?php echo trim($candidatos["apellidoCasada"]); ?></b> de <?php echo  strtolower(trim($V->ValorEnLetras($candidatos["edad"],''))); ?> años de edad,
+      <b><?php echo trim($candidatos["primerNombre"]); ?> <?php echo trim($candidatos["segundoNombre"]); ?> <?php echo trim($candidatos["primerApellido"]); ?> <?php echo trim($candidatos["segundoApellido"]); ?> </b> de <?php echo  strtolower(trim($V->ValorEnLetras($candidatos["edad"],''))); ?> años de edad,
       <?php if ($candidatos["sexo"] == "MASCULINO") { echo " empleado"; } else if ($candidatos["sexo"] == "FEMENINO") { echo " Empleada"; } ?>
       con el cargo de <?php echo strtolower($candidatos["cargo"]); ?>, del domicilio de <?php echo $candidatos["domicilio"]; ?>, de nacionalidad salvadoreña, con Documento Único de Identidad número
       <?php
@@ -146,12 +146,12 @@ $totalGolbal = $con->arreglo( $toV );
       while ( $dato = $con->arreglo( $da ) ) {
 
 
-        $can = $con->consulta( "SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_candidato = '$dato[id_candidato]' AND candidatos.eliminado = 0 " );
+        $can = $con->consulta( "SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_candidato = '$dato[id_candidato]'  " );
 
         $datos = $con->arreglo( $can );
 
 
-        echo "<b>" . $datos[ "primerNombre" ] . " " . $datos[ "segundoNombre" ] . " " . $datos[ "primerApellido" ] . " " . $datos[ "segundoApellido" ] . " " . $datos[ "apellidoCasada" ] . "</b>, obtuvo " . strtolower( trim( $V->ValorEnLetras( $dato[ "total" ], '' ) ) ) . " votos. ";
+        echo "<b>" . $datos[ "primerNombre" ] . " " . $datos[ "segundoNombre" ] . " " . $datos[ "primerApellido" ] . " " . $datos[ "segundoApellido" ] . " " . "</b>, obtuvo " . strtolower( trim( $V->ValorEnLetras( $dato[ "total" ], '' ) ) ) . " votos. ";
 
       }
       ?>
@@ -163,12 +163,12 @@ $totalGolbal = $con->arreglo( $toV );
       $datoss1 = $con->arreglo( $daa1 );
 
 
-      $cann1 = $con->consulta( "SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_candidato = '$datoss1[id_candidato]' AND candidatos.eliminado = 0 AND candidatos.estado = 'Activo'  " );
+      $cann1 = $con->consulta( "SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_candidato = '$datoss1[id_candidato]'  AND candidatos.estado = 'Activo'  " );
 
       $datosSS1 = $con->arreglo( $cann1 );
 
 
-      echo "<b>" . $datosSS1[ "primerNombre" ] . " " . $datosSS1[ "segundoNombre" ] . " " . $datosSS1[ "primerApellido" ] . " " . $datosSS1[ "segundoApellido" ] . " " . $datosSS1[ "apellidoCasada" ] . "</b>, quien obtuvo " . strtolower( trim( $V->ValorEnLetras( $datoss1[ "total" ], '' ) ) ) . " (" . $datoss1[ "total" ] . ") votos;";
+      echo "<b>" . $datosSS1[ "primerNombre" ] . " " . $datosSS1[ "segundoNombre" ] . " " . $datosSS1[ "primerApellido" ] . " " . $datosSS1[ "segundoApellido" ] . " " . "</b>, quien obtuvo " . strtolower( trim( $V->ValorEnLetras( $datoss1[ "total" ], '' ) ) ) . " (" . $datoss1[ "total" ] . ") votos;";
       ?>
       y como suplente para conformar dicha Comisión es:
       <?php
@@ -177,13 +177,13 @@ $totalGolbal = $con->arreglo( $toV );
       $datoss2 = $con->arreglo( $daa2 );
 
 
-      $cann2 = $con->consulta( "SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido, afiliados.apellidoCasada FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_candidato = '$datoss2[id_candidato]' AND candidatos.eliminado = 0 AND candidatos.estado = 'Activo'  " );
+      $cann2 = $con->consulta( "SELECT afiliados.primerNombre, afiliados.segundoNombre, afiliados.primerApellido, afiliados.segundoApellido FROM candidatos INNER JOIN afiliados ON candidatos.id_afiliado = afiliados.id WHERE candidatos.id_candidato = '$datoss2[id_candidato]'  AND candidatos.estado = 'Activo'  " );
 
 
       $datosSS2 = $con->arreglo( $cann2 );
 
 
-      echo "<b>" . $datosSS2[ "primerNombre" ] . " " . $datosSS2[ "segundoNombre" ] . " " . $datosSS2[ "primerApellido" ] . " " . $datosSS2[ "segundoApellido" ] . " " . $datosSS2[ "apellidoCasada" ] . "</b>, quien obtuvo " . strtolower( trim( $V->ValorEnLetras( $datoss2[ "total" ], '' ) ) ) . " (" . $datoss2[ "total" ] . ") votos.";
+      echo "<b>" . $datosSS2[ "primerNombre" ] . " " . $datosSS2[ "segundoNombre" ] . " " . $datosSS2[ "primerApellido" ] . " " . $datosSS2[ "segundoApellido" ] . " " . "</b>, quien obtuvo " . strtolower( trim( $V->ValorEnLetras( $datoss2[ "total" ], '' ) ) ) . " (" . $datoss2[ "total" ] . ") votos.";
       ?>
       En el supuesto que alguno de las personas electas como miembros de la Comisión de Ética Gubernamental por los servidores públicos de la institución cesen de manera definitiva de su cargo se procederá conforme al art. 33 número 5 del Reglamento de la Ley de Ética Gubernamental que literalmente dice: “En caso de cesación definitiva del miembro propietario electo, su lugar lo ocupará el suplente, y el de éste corresponderá a quien le hubiere seguido en número de votos, si lo hubiese; y así sucesivamente. Si no hubiere otro candidato que pudiera suplir, se deberá realizar un nuevo procedimiento de elección”. Habiéndose cumplido con lo establecido en los artículos 33 y 34 del Reglamento de la Ley de Ética Gubernamental, no sin antes dejar constancia que la presente acta será firmada por <?php echo $parametro["nombreAlcalde"]; ?> <?php echo $parametro["cargoAlcalde"]; ?>, por ser la persona que ha sido delegada para que se encargue de coordinar el proceso eleccionario anteriormente descrito y por <?php echo $parametro["observador"]; ?> por ser el observador designado por parte del Tribunal de Ética Gubernamental. No habiendo nada más que hacer constar damos por cerrada la presente acta y firmamos. </p>
   </div>
